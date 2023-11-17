@@ -1,3 +1,9 @@
+import Dummy from "@/components/Dummy"
+
 export default function Home() {
-  return <main>Hello world</main>
+  return (
+    <main>
+      <Dummy />
+    </main>
+  )
 }
