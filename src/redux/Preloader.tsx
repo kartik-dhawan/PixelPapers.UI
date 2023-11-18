@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { store } from "./store"
-import { increaseCount } from "./slices/countSlice"
+import { updateContentfulData } from "./slices/contentSlice"
 /**
  * since we're using redux on both server and client side differently,
  * the client side state management gets initialized (with their initial state probably null)
@@ -22,7 +22,7 @@ const Preloader = ({ data }: any) /* eslint-disable-line */ => {
   const loaded = useRef(false)
   if (!loaded.current) {
     // dispatch data from the server to all the slices as required
-    if (data.count) store.dispatch(increaseCount(data.count))
+    if (data.content) store.dispatch(updateContentfulData(data.content))
     loaded.current = true
   }
 
