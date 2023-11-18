@@ -1,9 +1,12 @@
 import Dummy from "@/components/Dummy"
+import ReduxProvider from "@/redux/ReduxProvider"
 
 export default function Home() {
   return (
     <main>
-      <Dummy />
+      <ReduxProvider>
+        <Dummy />
+      </ReduxProvider>
     </main>
   )
 }
