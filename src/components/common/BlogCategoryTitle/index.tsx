@@ -6,6 +6,7 @@ import { Box, Stack } from "@mui/material"
 import { useSelector } from "react-redux"
 import CuratedBy from "./CuratedBy"
 import { styles } from "./styles"
+import { CURATED_BY_LINK_DEFAULT_TEXT } from "@/utils/constants"
 
 interface BlogCategoryTitleProps {
   category: "travel"
@@ -28,7 +29,10 @@ const BlogCategoryTitle = ({ category }: BlogCategoryTitleProps) => {
       alignItems="center"
       margin={{ xs: "2rem 0rem", md: "4rem 0rem" }}
     >
-      <CuratedBy name="kartik-dhawan" url="https://instagram.com/notkartikk" />
+      <CuratedBy
+        name={CURATED_BY_LINK_DEFAULT_TEXT}
+        url={content?.curatedByLink}
+      />
       {content && (
         <>
           <Box component="h1" sx={styles.blogCategoryTitle}>

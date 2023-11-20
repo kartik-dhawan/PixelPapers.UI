@@ -56,14 +56,29 @@ export const styles = {
   },
   curatedByUserLink: {
     "& a": {
+      position: "relative",
       fontSize: {
         xs: "18px",
         md: "22px",
         xl: "24px",
       },
-      color: "#111",
       fontWeight: 700,
+      color: "#111",
+      borderBottom: "1.5px solid #aa9292",
       textDecoration: "none",
+      "&::before": {
+        content: `""`, // eslint-disable-line
+        position: "absolute",
+        height: "2px",
+        width: "0%",
+        backgroundColor: "#222",
+        bottom: "-2px",
+        left: 0,
+        transition: "200ms all ease",
+      },
+      "&:hover::before": {
+        width: "100%",
+      },
     },
   },
   curatedText: {
