@@ -32,8 +32,8 @@ export const styles = {
     },
     textAlign: "center",
     fontSize: {
-      xs: "16px",
-      sm: "18px",
+      xs: "18px",
+      md: "20px",
       xl: "22px",
     },
     color: PAGE_LEVEL_COLORS.TRAVEL.TEXT_PRIMARY_LIGHTER,
