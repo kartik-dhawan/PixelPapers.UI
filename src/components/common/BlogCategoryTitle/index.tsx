@@ -5,6 +5,8 @@ import { dmSans } from "@/utils/fonts"
 import { Box, Stack } from "@mui/material"
 import Link from "next/link"
 import { useSelector } from "react-redux"
+import CuratedBy from "./CuratedBy"
+import { styles } from "./styles"
 
 interface BlogCategoryTitleProps {
   category: "travel"
@@ -12,7 +14,6 @@ interface BlogCategoryTitleProps {
 
 const BlogCategoryTitle = ({ category }: BlogCategoryTitleProps) => {
   const { content } = useSelector((state: RootType) => state.contentSlice)
-  console.log(content)
 
   const categoryData = {
     travel: {
@@ -22,19 +23,21 @@ const BlogCategoryTitle = ({ category }: BlogCategoryTitleProps) => {
   }
 
   return (
-    <Stack className={dmSans.className} alignItems="center">
-      <Box>
-        <Box component="span">Curated</Box>
-        <Box component="span">by</Box>
-        <Box component="span" />
-        <Box component="span">
-          <Link href="#">kartik-dhawan</Link>
-        </Box>
-      </Box>
+    <Stack
+      className={`${category}PageHeadWrapper ${dmSans.className}`}
+      data-testid={`${category}PageHeadWrapper`}
+      alignItems="center"
+      margin="4rem 0rem"
+    >
+      <CuratedBy name="kartik-dhawan" url="https://instagram.com/notkartikk" />
       {content && (
         <>
-          <Box component="h1">{categoryData[category].title}</Box>
-          <Box component="p">{categoryData[category].description}</Box>
+          <Box component="h1" sx={styles.blogCategoryTitle}>
+            {categoryData[category].title}
+          </Box>
+          <Box component="p" sx={styles.blogCategoryTitleSubtext}>
+            {categoryData[category].description}
+          </Box>
         </>
       )}
     </Stack>

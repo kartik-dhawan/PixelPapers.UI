@@ -5,13 +5,22 @@ import { store } from "@/redux/store"
 import { ChildrenProps } from "@/utils/interfaces"
 
 export const metadata = {
-  metadataBase: new URL("https://kartikdhawan.in"),
+  metadataBase: new URL("https://blogs.kartikdhawan.in"),
   title: "Pixel Papers",
 }
 const RootLayout = async ({ children }: ChildrenProps) => {
-  // fetches content from contentful from the collection for PixelPapers
-  const content = await getContentfulData()
-  content && store.dispatch(updateContentfulData(content))
+  let content
+
+  try {
+    // fetches content from contentful from the collection for PixelPapers
+    content = await getContentfulData()
+    if (content) {
+      store.dispatch(updateContentfulData(content))
+    }
+  } catch (error: any) {
+    throw Error(error)
+  }
+
   return (
     <>
       {/* <preloader/> syncs server side redux store to client side store */}

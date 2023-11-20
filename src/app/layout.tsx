@@ -11,7 +11,11 @@ export const metadata: Metadata = {
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body
+        className={inter.className}
+        suppressHydrationWarning={true}
+        style={{ margin: 0 }}
+      >
         {children}
       </body>
     </html>
