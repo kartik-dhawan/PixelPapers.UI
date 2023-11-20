@@ -1,15 +1,16 @@
+import ReduxProvider from "@/redux/ReduxProvider"
 import "@testing-library/jest-dom"
 import renderer from "react-test-renderer"
-import Dummy from "./Dummy"
-import ReduxProvider from "@/redux/ReduxProvider"
+import BlogCategoryTitle from "."
 
-describe("Experience section", () => {
+describe("Blog category title section component", () => {
   it("-- should match the snapshot", () => {
     const tree = renderer.create(
       <ReduxProvider>
-        <Dummy />
+        <BlogCategoryTitle category="travel" />
       </ReduxProvider>,
     )
+
     expect(tree).toMatchSnapshot()
   })
 })
