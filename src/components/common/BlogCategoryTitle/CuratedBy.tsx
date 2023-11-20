@@ -12,7 +12,7 @@ interface CuratedByProps {
 const CuratedBy = ({ name, url }: CuratedByProps) => {
   return (
     <Box sx={{ display: "flex", gap: "4px", alignItems: "center" }}>
-      <Box component="span" sx={{ fontSize: "22px", fontWeight: 400 }}>
+      <Box component="span" sx={styles.curatedText}>
         Curated
       </Box>
       <Box component="span" sx={{ fontSize: "14px" }}>
