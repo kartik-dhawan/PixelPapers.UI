@@ -2,7 +2,7 @@ import { GLOBAL_COLORS } from "@/utils/colorSchemes"
 
 export const styles = {
   travelThumbnailsSectionWrapper: {
-    width: "70%",
+    width: "75%",
     minWidth: {
       xs: "100vw",
       md: "900px",
@@ -26,7 +26,7 @@ export const styles = {
     minWidth: "250px",
     transition: "1600ms all ease",
     "&:hover": {
-      flexGrow: 7,
+      flexGrow: 8,
     },
   },
   travelThumbnailsImageWrapper: {

@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The thumbnail card component -- should match the snapshot 1`] = `
+<li
+  className="MuiImageListItem-root travelThumbnailCardListItem css-96pj01-MuiImageListItem-root"
+  data-testid="travelThumbnailCardListItem0"
+  style={
+    {
+      "breakInside": undefined,
+      "gridColumnEnd": "span 1",
+      "gridRowEnd": "span 1",
+      "height": "auto",
+      "marginBottom": undefined,
+    }
+  }
+>
+  <a
+    href="#"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onTouchStart={[Function]}
+    target="_blank"
+  >
+    <div
+      className="travelThumbnailImageWrapper MuiBox-root css-1kzsnqq"
+      data-testid="travelThumbnailImageWrapper0"
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+      <img
+        alt=""
+        data-nimg="fill"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw)"
+        src="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=3840&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=384&q=75 384w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F1v98waf66sfj%2F6TVtXnjJIZ812Bxm6VBqz5%2F5b89ce3dced278570a2a663453d69a65%2FIMG_3749.webp&w=3840&q=75 3840w"
+        style={
+          {
+            "bottom": 0,
+            "color": "transparent",
+            "height": "100%",
+            "left": 0,
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </a>
+</li>
+`;
+
+exports[`The thumbnail text data component -- should match the snapshot 1`] = `
+[
+  <div
+    className="MuiBox-root css-nlooa6"
+  >
+    Travel Itinerary
+  </div>,
+  <h4
+    className="MuiBox-root css-1liqna"
+  >
+    Jibhi - Jalori
+  </h4>,
+  <div
+    className="MuiBox-root css-1g91hrd"
+  >
+    Himachal Pradesh
+  </div>,
+]
+`;
+
+exports[`Travel blog thumbnail cards component -- should match the snapshot 1`] = `
+<div
+  className="travelThumbnailWrapper MuiBox-root css-tb3nyz"
+  id="travelThumbnailWrapper"
+>
+  <ul
+    className="MuiImageList-root MuiImageList-standard travelThumbnailImageList css-gsuz1i-MuiImageList-root"
+    data-testid="travelThumbnailImageList"
+    style={
+      {
+        "gap": 12,
+        "gridTemplateColumns": "repeat(3, 1fr)",
+      }
+    }
+  />
+</div>
+`;
