@@ -2,7 +2,18 @@
 const nextConfig = {
   images: {
     // reactStrictMode: false,
-    domains: ["images.ctfassets.net", "assets.ctfassets.net"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "assets.ctfassets.net",
+        pathname: "**",
+      },
+    ],
   },
 }
 

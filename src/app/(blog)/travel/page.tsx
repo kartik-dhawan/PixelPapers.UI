@@ -1,5 +1,6 @@
 import BlogCategoryTitle from "@/components/common/BlogCategoryTitle"
 import TravelBlogThumbnail from "@/components/common/TravelBlogThumbnail"
+import { styles } from "@/components/common/TravelBlogThumbnail/styles"
 import ReduxProvider from "@/redux/ReduxProvider"
 import { PAGE_LEVEL_COLORS } from "@/utils/colorSchemes"
 import { Box, Stack } from "@mui/material"
@@ -18,10 +19,18 @@ const Travelpage = () => {
           category="travel"
           themeColor={PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK}
         />
-        <Box component="h2">Travel Stories</Box>
-        <TravelBlogThumbnail type="stories" largeCardIndex={0} />
-        <Box component="h2">Travel Blueprints</Box>
-        <TravelBlogThumbnail type="itineraries" largeCardIndex={2} />
+        <Box sx={{ marginBottom: "6rem" }}>
+          <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
+            Travel Stories
+          </Box>
+          <TravelBlogThumbnail type="stories" largeCardIndex={0} />
+        </Box>
+        <Box sx={{ marginBottom: "6rem" }}>
+          <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
+            Travel Blueprints
+          </Box>
+          <TravelBlogThumbnail type="itineraries" largeCardIndex={2} />
+        </Box>
       </Stack>
     </ReduxProvider>
   )

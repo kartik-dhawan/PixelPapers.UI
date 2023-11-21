@@ -72,5 +72,14 @@ export const styles = {
     },
     opacity: 0.8,
   },
-  // travelThumbnails
+
+  // blog group - stories & itineraries
+  travelThumbnailsBlogGroupTitle: {
+    textTransform: "uppercase",
+    margin: 0,
+    width: "100%",
+    padding: "0rem 20px",
+    boxSizing: "border-box",
+    fontSize: "20px",
+  },
 }
