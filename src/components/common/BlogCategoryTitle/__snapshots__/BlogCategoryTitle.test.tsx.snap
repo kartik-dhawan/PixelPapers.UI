@@ -28,10 +28,10 @@ exports[`Blog category title section component -- should match the snapshot 1`] 
     </span>
   </div>
   <h1
-    className="MuiBox-root css-1kzpj4b"
+    className="MuiBox-root css-heu39z"
   />
   <p
-    className="MuiBox-root css-yp7gmd"
+    className="MuiBox-root css-zduu3p"
   />
 </div>
 `;
