@@ -2,7 +2,6 @@
 
 import { RootType } from "@/redux/store"
 import { useSelector } from "react-redux"
-import { signal } from "@preact/signals"
 import { Box, ImageList, ImageListItem, ImageListItemBar } from "@mui/material"
 import Image from "next/image"
 import { ThumbnailItem } from "@/utils/interfaces"
@@ -15,21 +14,12 @@ interface TravelThumbnailProps {
   largeCardIndex: 0 | 1 | 2
 }
 
-// initializing a signal
-const thumbnails = signal([])
-
 const TravelBlogThumbnail = ({
   type,
   largeCardIndex,
 }: TravelThumbnailProps) => {
   const tid = "travelThumbnail"
   const { content } = useSelector((state: RootType) => state.contentSlice)
-
-  // changing signal's value using content
-  thumbnails.value =
-    type === "stories"
-      ? content?.travelStoryBlogs
-      : content?.travelItineraryBlogs
 
   return (
     <Box
@@ -44,7 +34,9 @@ const TravelBlogThumbnail = ({
         cols={3}
         gap={12}
       >
-        {thumbnails.value?.map((item: ThumbnailItem, index: number) => {
+        {content[
+          type === "stories" ? "travelStoryBlogs" : "travelItineraryBlogs"
+        ]?.map((item: ThumbnailItem, index: number) => {
           return (
             <ImageListItem
               className={tid + "CardListItem"}

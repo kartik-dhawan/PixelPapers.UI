@@ -15,7 +15,6 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.18",
-    "@preact/signals": "^1.2.1",
     "@reduxjs/toolkit": "^1.9.7",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "contentful": "^10.6.10",
