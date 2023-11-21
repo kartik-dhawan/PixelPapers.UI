@@ -15,10 +15,12 @@ exports[`The thumbnail card component -- should match the snapshot 1`] = `
   }
 >
   <a
+    aria-label="Click to view the blog: Jibhi - Jalori"
     href="#"
     onClick={[Function]}
     onMouseEnter={[Function]}
     onTouchStart={[Function]}
+    rel="noreferrer"
     target="_blank"
   >
     <div
@@ -35,7 +37,7 @@ exports[`The thumbnail card component -- should match the snapshot 1`] = `
         }
       />
       <img
-        alt=""
+        alt="A picture of sunset from Raghupur fort close to jalori pass"
         data-nimg="fill"
         decoding="async"
         loading="lazy"

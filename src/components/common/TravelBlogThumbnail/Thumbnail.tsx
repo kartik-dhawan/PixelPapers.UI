@@ -44,7 +44,14 @@ const Thumbnail = ({ item, index, largeCardIndex }: ThumbnailProps) => {
         ...styles.travelThumbnailsCardListItem,
       }}
     >
-      <Link href="#" target="_blank">
+      <Link
+        href="#"
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Click to view the blog: ${
+          item?.blogMetaTitle ?? "Travel & More"
+        }`}
+      >
         <Box
           className={tid + "ImageWrapper"}
           data-testid={tid + "ImageWrapper" + index}
@@ -56,7 +63,7 @@ const Thumbnail = ({ item, index, largeCardIndex }: ThumbnailProps) => {
           <Image
             onLoad={imageLoadingHandler}
             src={`https:${item.blogMetaImage.fields.file.url}`}
-            alt=""
+            alt={item.blogMetaImage.fields.description}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw)"
           />

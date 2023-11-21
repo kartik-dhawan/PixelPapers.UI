@@ -28,7 +28,12 @@ const CuratedBy = ({ name, url, themeColor }: CuratedByProps) => {
       />
       <Box component="span" sx={styles.curatedByUserLink}>
         {url ? (
-          <Link href={url} target="_blank">
+          <Link
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View the instagram profile of Kartik Dhawan (The curator of this website)"
+          >
             {name}
           </Link>
         ) : (
