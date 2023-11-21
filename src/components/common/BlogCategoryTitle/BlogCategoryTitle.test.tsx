@@ -7,7 +7,7 @@ describe("Blog category title section component", () => {
   it("-- should match the snapshot", () => {
     const tree = renderer.create(
       <ReduxProvider>
-        <BlogCategoryTitle category="travel" />
+        <BlogCategoryTitle category="travel" themeColor="red" />
       </ReduxProvider>,
     )
 

@@ -10,8 +10,9 @@ export const styles = {
     fontSize: {
       xs: "48px",
       sm: "64px",
-      md: "72px",
-      xl: "88px",
+      md: "76px",
+      lg: "104px",
+      xl: "120px",
     },
     textTransform: "uppercase",
     color: GLOBAL_COLORS.TEXT_PRIMARY_DARK,
@@ -24,7 +25,8 @@ export const styles = {
   blogCategoryTitleSubtext: {
     maxWidth: {
       xs: "720px",
-      xl: "880px",
+      lg: "1080px",
+      xl: "1260px",
     },
     padding: {
       xs: "0rem 2rem",
@@ -34,7 +36,8 @@ export const styles = {
     fontSize: {
       xs: "18px",
       md: "20px",
-      xl: "22px",
+      lg: "22px",
+      xl: "24px",
     },
     color: PAGE_LEVEL_COLORS.TRAVEL.TEXT_PRIMARY_LIGHTER,
   },
@@ -47,7 +50,6 @@ export const styles = {
       xl: "36px",
     },
     aspectRatio: "1/1",
-    backgroundColor: PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK,
     borderRadius: "50%",
     margin: {
       xs: "0rem 4px 0rem 8px",

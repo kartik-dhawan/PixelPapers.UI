@@ -10,9 +10,13 @@ import { CURATED_BY_LINK_DEFAULT_TEXT } from "@/utils/constants"
 
 interface BlogCategoryTitleProps {
   category: "travel"
+  themeColor: string
 }
 
-const BlogCategoryTitle = ({ category }: BlogCategoryTitleProps) => {
+const BlogCategoryTitle = ({
+  category,
+  themeColor,
+}: BlogCategoryTitleProps) => {
   const { content } = useSelector((state: RootType) => state.contentSlice)
 
   const categoryData = {
@@ -32,6 +36,7 @@ const BlogCategoryTitle = ({ category }: BlogCategoryTitleProps) => {
       <CuratedBy
         name={CURATED_BY_LINK_DEFAULT_TEXT}
         url={content?.curatedByLink}
+        themeColor={themeColor}
       />
       {content && (
         <>
