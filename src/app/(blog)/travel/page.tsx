@@ -1,4 +1,5 @@
 import BlogCategoryTitle from "@/components/common/BlogCategoryTitle"
+import TravelBlogThumbnail from "@/components/common/TravelBlogThumbnail"
 import ReduxProvider from "@/redux/ReduxProvider"
 import { PAGE_LEVEL_COLORS } from "@/utils/colorSchemes"
 import { Stack } from "@mui/material"
@@ -17,6 +18,7 @@ const Travelpage = () => {
           category="travel"
           themeColor={PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK}
         />
+        <TravelBlogThumbnail type="stories" />
       </Stack>
     </ReduxProvider>
   )
