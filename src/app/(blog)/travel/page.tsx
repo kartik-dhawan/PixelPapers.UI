@@ -13,7 +13,10 @@ const Travelpage = () => {
           minHeight: "100svh",
         }}
       >
-        <BlogCategoryTitle category="travel" />
+        <BlogCategoryTitle
+          category="travel"
+          themeColor={PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK}
+        />
       </Stack>
     </ReduxProvider>
   )

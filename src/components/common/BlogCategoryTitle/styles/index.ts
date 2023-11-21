@@ -47,7 +47,6 @@ export const styles = {
       xl: "36px",
     },
     aspectRatio: "1/1",
-    backgroundColor: PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK,
     borderRadius: "50%",
     margin: {
       xs: "0rem 4px 0rem 8px",
