@@ -78,7 +78,11 @@ export const styles = {
     textTransform: "uppercase",
     margin: 0,
     width: "100%",
-    padding: "0rem 20px",
+    padding: {
+      xs: "0rem 1rem",
+      sm: "0rem 3rem",
+      md: "0rem 1rem",
+    },
     boxSizing: "border-box",
     fontSize: "20px",
   },
