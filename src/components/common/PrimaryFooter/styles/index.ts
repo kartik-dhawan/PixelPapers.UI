@@ -3,7 +3,7 @@ import { GLOBAL_COLORS } from "@/utils/colorSchemes"
 export const styles = {
   primaryFooterWrapper: {
     color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHT,
-    padding: "2rem 2rem",
+    padding: "1.5rem 2rem",
     boxSizing: "border-box",
   },
   primaryFooterSocialLinksList: {
