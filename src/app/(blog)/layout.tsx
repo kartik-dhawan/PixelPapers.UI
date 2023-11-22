@@ -3,6 +3,7 @@ import { getContentfulData } from "@/lib/methods"
 import Preloader from "@/redux/Preloader"
 import ReduxProvider from "@/redux/ReduxProvider"
 import { updateContentfulData } from "@/redux/slices/contentSlice"
+import { addAllTravelBlogs } from "@/redux/slices/travelSlice"
 import { store } from "@/redux/store"
 import { ChildrenProps } from "@/utils/interfaces"
 
@@ -11,13 +12,21 @@ export const metadata = {
   title: "Pixel Papers",
 }
 const RootLayout = async ({ children }: ChildrenProps) => {
-  let content
+  let content: any
+  let travelBlogs: any
 
   try {
     // fetches content from contentful from the collection for PixelPapers
     content = await getContentfulData()
     if (content) {
+      // gets all travelling blogs including both articles & itineraries
+      travelBlogs = [
+        ...content.travelStoryBlogs,
+        ...content.travelItineraryBlogs,
+      ]
+
       store.dispatch(updateContentfulData(content))
+      store.dispatch(addAllTravelBlogs(travelBlogs))
     }
   } catch (error: any) {
     throw Error(error)
@@ -29,6 +38,7 @@ const RootLayout = async ({ children }: ChildrenProps) => {
       <Preloader
         data={{
           content,
+          travelBlogs,
         }}
       />
       <section>{children}</section>

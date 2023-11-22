@@ -45,7 +45,7 @@ const Thumbnail = ({ item, index, largeCardIndex }: ThumbnailProps) => {
       }}
     >
       <Link
-        href="#"
+        href={`/travel/${item.blogUrlSlug}`}
         target="_blank"
         rel="noreferrer"
         aria-label={`Click to view the blog: ${

@@ -21,3 +21,18 @@ export interface SocialMediaLink {
   url: string
   icon: string
 }
+
+export interface TravelBlogPost {
+  blogTitle?: string
+  blogMetaImage?: any
+  blogMetaTitle?: string
+  blogTravelLocation?: string
+  blogType?: string
+  blogUrlSlug?: string
+}
+
+export interface ContentfulTravelBlog {
+  fields: TravelBlogPost
+  sys: any
+  metadata: any
+}
