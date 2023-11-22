@@ -19,15 +19,15 @@ const Travelpage = () => {
           category="travel"
           themeColor={PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK}
         />
-        <Box sx={{ marginBottom: "6rem" }}>
+        <Box sx={{ marginBottom: "4rem" }}>
           <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
-            Travel Stories
+            Timeless Stories
           </Box>
           <TravelBlogThumbnail type="stories" largeCardIndex={0} />
         </Box>
-        <Box sx={{ marginBottom: "6rem" }}>
+        <Box sx={{ marginBottom: "4rem" }}>
           <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
-            Travel Blueprints
+            Blueprints
           </Box>
           <TravelBlogThumbnail type="itineraries" largeCardIndex={2} />
         </Box>

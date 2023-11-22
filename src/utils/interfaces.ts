@@ -15,3 +15,9 @@ export interface ThumbnailItem {
   }
   sys: any
 }
+export interface SocialMediaLink {
+  id: number
+  label: string
+  url: string
+  icon: string
+}

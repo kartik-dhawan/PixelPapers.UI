@@ -1,5 +1,7 @@
+import PrimaryFooter from "@/components/common/PrimaryFooter"
 import { getContentfulData } from "@/lib/methods"
 import Preloader from "@/redux/Preloader"
+import ReduxProvider from "@/redux/ReduxProvider"
 import { updateContentfulData } from "@/redux/slices/contentSlice"
 import { store } from "@/redux/store"
 import { ChildrenProps } from "@/utils/interfaces"
@@ -30,6 +32,9 @@ const RootLayout = async ({ children }: ChildrenProps) => {
         }}
       />
       <section>{children}</section>
+      <ReduxProvider>
+        <PrimaryFooter />
+      </ReduxProvider>
     </>
   )
 }
