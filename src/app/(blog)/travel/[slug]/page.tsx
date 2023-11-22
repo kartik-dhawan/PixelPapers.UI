@@ -5,13 +5,12 @@ import { Metadata, ResolvingMetadata } from "next"
 
 interface TravelSlugParams {
   params: { slug: string }
-  parent?: ResolvingMetadata
 }
 
-export async function generateMetadata({
-  params,
-  parent,
-}: TravelSlugParams): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: TravelSlugParams,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
   const currentBlog = await getTravelBlogBySlug(params?.slug ?? "")
 
   // optionally access and extend (rather than replace) parent metadata
