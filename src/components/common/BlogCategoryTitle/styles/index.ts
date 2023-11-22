@@ -65,7 +65,7 @@ export const styles = {
         xl: "24px",
       },
       fontWeight: 700,
-      color: "#111",
+      color: GLOBAL_COLORS.TEXT_PRIMARY_DARK,
       borderBottom: "1.5px solid #aa9292",
       textDecoration: "none",
       "&::before": {
