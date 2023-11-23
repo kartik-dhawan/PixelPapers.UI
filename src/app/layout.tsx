@@ -1,5 +1,3 @@
-import { getContentfulData } from "@/lib/methods"
-import Preloader from "@/redux/Preloader"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
@@ -11,18 +9,15 @@ export const metadata: Metadata = {
 }
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
-  // fetches content from contentful from the collection for PixelPapers
-  const content = await getContentfulData()
-
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
-      {/* <preloader/> syncs server side redux store to client side store */}
-      <Preloader
-        data={{
-          content,
-        }}
-      />
+      <body
+        className={inter.className}
+        suppressHydrationWarning={true}
+        style={{ margin: 0 }}
+      >
+        {children}
+      </body>
     </html>
   )
 }

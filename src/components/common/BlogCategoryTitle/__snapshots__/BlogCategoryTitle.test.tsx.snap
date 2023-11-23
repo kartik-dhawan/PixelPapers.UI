@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog category title section component -- should match the snapshot 1`] = `
+<div
+  className="MuiStack-root travelPageHeadWrapper className css-18a369j-MuiStack-root"
+  data-testid="travelPageHeadWrapper"
+>
+  <div
+    className="MuiBox-root css-wpwytb"
+  >
+    <span
+      className="MuiBox-root css-vuei1s"
+    >
+      Curated
+    </span>
+    <span
+      className="MuiBox-root css-1kuy7z7"
+    >
+      by
+    </span>
+    <span
+      className="MuiBox-root css-17e5opp"
+    />
+    <span
+      className="MuiBox-root css-112xwgt"
+    >
+      kartik-dhawan
+    </span>
+  </div>
+  <h1
+    className="MuiBox-root css-heu39z"
+  />
+  <p
+    className="MuiBox-root css-zduu3p"
+  />
+</div>
+`;

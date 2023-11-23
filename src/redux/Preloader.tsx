@@ -3,6 +3,7 @@
 import { useRef } from "react"
 import { store } from "./store"
 import { updateContentfulData } from "./slices/contentSlice"
+import { addAllTravelBlogs } from "./slices/travelSlice"
 /**
  * since we're using redux on both server and client side differently,
  * the client side state management gets initialized (with their initial state probably null)
@@ -23,6 +24,7 @@ const Preloader = ({ data }: any) /* eslint-disable-line */ => {
   if (!loaded.current) {
     // dispatch data from the server to all the slices as required
     if (data.content) store.dispatch(updateContentfulData(data.content))
+    if (data.travelBlogs) store.dispatch(addAllTravelBlogs(data.travelBlogs))
     loaded.current = true
   }
 

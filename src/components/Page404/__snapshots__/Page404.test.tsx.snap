@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The 404 Page component -- should match the snapshot 1`] = `
+<div
+  className="MuiStack-root notFoundWrapper className css-1fuvqsc-MuiStack-root"
+  data-testid="notFoundWrapper"
+>
+  <h1
+    className="notFoundStatusCode className MuiBox-root css-1ju47en"
+    data-testid="notFoundStatusCode"
+  >
+    404
+  </h1>
+  <div
+    className="notFoundBarCode className MuiBox-root css-1xmcpmd"
+    data-testid="notFoundBarCode"
+  >
+    R u lost, babygirl?
+  </div>
+  <div
+    className="notFoundTextbox MuiBox-root css-1dnlse9"
+    data-testid="notFoundTextbox"
+  >
+    Don‘t understand bar code? Yeah we don‘t understand your request either.
+    <br />
+    Please enter a valid URL.
+  </div>
+  <div
+    className="notFoundGoBackLink MuiBox-root css-14yzx88"
+    data-testid="notFoundGoBackLink"
+  >
+    <a
+      aria-label="Link that will take you back to the home page of this blog wesbite."
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Want us to take you back ‘home‘?
+    </a>
+  </div>
+</div>
+`;
