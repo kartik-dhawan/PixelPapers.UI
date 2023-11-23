@@ -1,14 +1,20 @@
-import BlogPostTitle from "@/components/common/BlogPostTitle"
-import BlogSideNavigation from "@/components/common/BlogSideNavigation"
-import TableOfContents from "@/components/common/TableOfContents"
+import BlogPostTitle from "@/components/blogposts/BlogPostTitle"
+import BlogSideNavigation from "@/components/blogposts/BlogSideNavigation"
+import TableOfContents from "@/components/blogposts/TableOfContents"
+import { getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
-import { ChildrenProps } from "@/utils/interfaces"
 import { Grid } from "@mui/material"
 
-const TravelBlogLayout = ({ children }: ChildrenProps) => {
+const TravelBlogLayout = async ({ children, params }: any) => {
+  const currentBlog = await getTravelBlogBySlug(params?.slug ?? "")
+
   return (
     <ReduxProvider>
-      <BlogPostTitle />
+      <BlogPostTitle
+        title={currentBlog?.blogTitle ?? ""}
+        description={currentBlog?.blogInitialDescription}
+        themeColor={currentBlog?.blogThemeColor}
+      />
       <Grid container spacing={2}>
         <Grid item component="section" lg={2}>
           <BlogSideNavigation />

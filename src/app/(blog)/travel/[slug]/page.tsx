@@ -1,6 +1,7 @@
 import TravelBlogPosts from "@/components/TravelBlogPosts"
 import { getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
+import { Box } from "@mui/material"
 import { Metadata, ResolvingMetadata } from "next"
 
 interface TravelSlugParams {
@@ -31,8 +32,10 @@ const TravelBlogPage = async ({ params }: TravelSlugParams) => {
 
   return (
     <ReduxProvider>
-      {currentBlog && (
+      {currentBlog ? (
         <TravelBlogPosts currentBlog={currentBlog} slug={params.slug} />
+      ) : (
+        <Box>The Page does not exist.</Box>
       )}
     </ReduxProvider>
   )
