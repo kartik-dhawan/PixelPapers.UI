@@ -57,7 +57,7 @@ export const styles = {
     },
   },
   curatedByUserLink: {
-    "& a": {
+    "& a, div": {
       position: "relative",
       fontSize: {
         xs: "18px",

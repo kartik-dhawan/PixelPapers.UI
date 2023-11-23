@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blog category title section component -- should match the snapshot 1`] = `
-<div
+<section
   className="MuiStack-root travelPageHeadWrapper className css-18a369j-MuiStack-root"
   data-testid="travelPageHeadWrapper"
 >
@@ -22,9 +22,19 @@ exports[`Blog category title section component -- should match the snapshot 1`] 
       className="MuiBox-root css-17e5opp"
     />
     <span
-      className="MuiBox-root css-112xwgt"
+      className="MuiBox-root css-dg28ou"
     >
-      kartik-dhawan
+      <a
+        aria-label="View the instagram profile of Kartik Dhawan (The curator of this website)"
+        href=""
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        rel="noreferrer"
+        target="_blank"
+      >
+        kartik-dhawan
+      </a>
     </span>
   </div>
   <h1
@@ -33,5 +43,5 @@ exports[`Blog category title section component -- should match the snapshot 1`] 
   <p
     className="MuiBox-root css-zduu3p"
   />
-</div>
+</section>
 `;

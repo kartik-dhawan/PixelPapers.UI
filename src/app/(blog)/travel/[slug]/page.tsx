@@ -1,6 +1,7 @@
 import TravelBlogPosts from "@/components/TravelBlogPosts"
 import { getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
+import { Box } from "@mui/material"
 import { Metadata, ResolvingMetadata } from "next"
 
 interface TravelSlugParams {
@@ -18,7 +19,7 @@ export async function generateMetadata(
 
   return {
     title: currentBlog?.blogTitle ?? "Travel Blog | Pixel Papers",
-    description: "",
+    description: `${currentBlog?.initialBlogDescription?.slice(0, 120)}...`,
     openGraph: {
       images: [currentBlog?.blogMetaImage.fields.file.url, ...previousImages],
     },
@@ -31,8 +32,10 @@ const TravelBlogPage = async ({ params }: TravelSlugParams) => {
 
   return (
     <ReduxProvider>
-      {currentBlog && (
+      {currentBlog ? (
         <TravelBlogPosts currentBlog={currentBlog} slug={params.slug} />
+      ) : (
+        <Box>The Page does not exist.</Box>
       )}
     </ReduxProvider>
   )

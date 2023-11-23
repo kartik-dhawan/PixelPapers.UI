@@ -14,7 +14,7 @@ const RootLayout = async ({ children }: { children: React.ReactNode }) => {
       <body
         className={inter.className}
         suppressHydrationWarning={true}
-        style={{ margin: 0 }}
+        style={{ margin: 0, minHeight: "100svh" }}
       >
         {children}
       </body>

@@ -29,6 +29,8 @@ export interface TravelBlogPost {
   blogTravelLocation?: string
   blogType?: string
   blogUrlSlug?: string
+  initialBlogDescription?: string
+  blogThemeColor?: string
 }
 
 export interface ContentfulTravelBlog {

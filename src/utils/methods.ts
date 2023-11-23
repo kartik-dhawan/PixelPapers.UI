@@ -21,9 +21,9 @@ export const objectToQueryString = (
  * @returns {string} // hexcode
  */
 export const getThemeColorByPath = (path: string): string => {
-  if (path === "/travel") {
-    return PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK
-  } else {
-    return GLOBAL_COLORS.BACKGROUND_PRIMARY_DARK
+  const colors: any = {
+    "/travel": PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK,
   }
+
+  return colors[path] ?? GLOBAL_COLORS.COMMON_FOOTER_BACKGRUND_DARK
 }
