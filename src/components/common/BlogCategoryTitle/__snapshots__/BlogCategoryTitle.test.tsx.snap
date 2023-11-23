@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Blog category title section component -- should match the snapshot 1`] = `
-<div
+<section
   className="MuiStack-root travelPageHeadWrapper className css-18a369j-MuiStack-root"
   data-testid="travelPageHeadWrapper"
 >
@@ -33,5 +33,5 @@ exports[`Blog category title section component -- should match the snapshot 1`] 
   <p
     className="MuiBox-root css-zduu3p"
   />
-</div>
+</section>
 `;

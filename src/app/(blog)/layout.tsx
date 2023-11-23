@@ -41,7 +41,7 @@ const RootLayout = async ({ children }: ChildrenProps) => {
           travelBlogs,
         }}
       />
-      <section>{children}</section>
+      <main>{children}</main>
       <ReduxProvider>
         <PrimaryFooter />
       </ReduxProvider>
