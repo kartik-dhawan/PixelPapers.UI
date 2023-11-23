@@ -19,7 +19,7 @@ export async function generateMetadata(
 
   return {
     title: currentBlog?.blogTitle ?? "Travel Blog | Pixel Papers",
-    description: "",
+    description: `${currentBlog?.initialBlogDescription?.slice(0, 120)}...`,
     openGraph: {
       images: [currentBlog?.blogMetaImage.fields.file.url, ...previousImages],
     },

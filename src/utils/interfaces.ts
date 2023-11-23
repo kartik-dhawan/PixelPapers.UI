@@ -29,7 +29,7 @@ export interface TravelBlogPost {
   blogTravelLocation?: string
   blogType?: string
   blogUrlSlug?: string
-  blogInitialDescription?: any
+  initialBlogDescription?: string
   blogThemeColor?: string
 }
 

@@ -12,7 +12,7 @@ const TravelBlogLayout = async ({ children, params }: any) => {
     <ReduxProvider>
       <BlogPostTitle
         title={currentBlog?.blogTitle ?? ""}
-        description={currentBlog?.blogInitialDescription}
+        description={currentBlog?.initialBlogDescription ?? ""}
         themeColor={currentBlog?.blogThemeColor}
       />
       <Grid container spacing={2}>

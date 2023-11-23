@@ -1,7 +1,6 @@
 import { Box, Stack } from "@mui/material"
 import CuratedBy from "../../common/BlogCategoryTitle/CuratedBy"
 import { GLOBAL_COLORS } from "@/utils/colorSchemes"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { dmSans } from "@/utils/fonts"
 import { styles } from "./styles"
 
@@ -40,7 +39,7 @@ const BlogPostTitle = ({
         data-testid={bid + "InitialDesc"}
         sx={styles.blogPostInitialDesc}
       >
-        {documentToReactComponents(description)}
+        {description}
       </Box>
     </Stack>
   )
