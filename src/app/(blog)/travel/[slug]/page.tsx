@@ -13,7 +13,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const currentBlog = await getTravelBlogBySlug(params?.slug ?? "")
 
-  // optionally access and extend (rather than replace) parent metadata
+  // optionally access & extend (rather than replace) parent metadata
   const previousImages = (await parent)?.openGraph?.images || []
 
   return {
