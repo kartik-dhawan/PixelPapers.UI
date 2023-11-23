@@ -20,7 +20,10 @@ export async function generateMetadata(
     title: currentBlog?.blogTitle ?? "Travel Blog | Pixel Papers",
     description: "",
     openGraph: {
-      images: [currentBlog?.blogMetaImage.fields.file.url, ...previousImages],
+      images: [
+        `https:${currentBlog?.blogMetaImage.fields.file.url}`,
+        ...previousImages,
+      ],
     },
   }
 }
