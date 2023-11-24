@@ -38,3 +38,9 @@ export interface ContentfulTravelBlog {
   sys: any
   metadata: any
 }
+
+export interface TravelBlogContentfulObject {
+  metadata: any
+  fields: TravelBlogPost
+  sys: any
+}
