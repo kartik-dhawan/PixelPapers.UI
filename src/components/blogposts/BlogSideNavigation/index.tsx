@@ -36,7 +36,10 @@ const BlogSideNavigation = ({
                 },
               }}
             >
-              <Link href={`/travel/${item.fields.blogUrlSlug}`}>
+              <Link
+                href={`/travel/${item.fields.blogUrlSlug}`}
+                aria-label={`Click here to go to another article named: ${item.fields.blogTitle}`}
+              >
                 {item.fields.blogTitle}
               </Link>
             </ListItem>

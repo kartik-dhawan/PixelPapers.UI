@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Side Navigation Component -- it should match the snapshot 1`] = `
+<div
+  className="MuiStack-root className css-12zr2ls-MuiStack-root"
+>
+  <div
+    className="MuiBox-root css-iuq8d6"
+  >
+    More on 
+    Travel
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-fullWidth css-9rad00-MuiDivider-root"
+  />
+  <ul
+    className="MuiList-root MuiList-padding css-12li9bz-MuiList-root"
+  >
+    <li
+      className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-kpth0l-MuiListItem-root"
+      disabled={false}
+    >
+      <a
+        aria-label="Click here to go to another article named: The Labyrith of Jodhpur"
+        href="/travel/labyrinth-of-jodhpur"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        The Labyrith of Jodhpur
+      </a>
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-kpth0l-MuiListItem-root"
+      disabled={false}
+    >
+      <a
+        aria-label="Click here to go to another article named: The Labyrith of Jodhpur"
+        href="/travel/labyrinth-of-jodhpur"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        The Labyrith of Jodhpur
+      </a>
+    </li>
+  </ul>
+</div>
+`;
