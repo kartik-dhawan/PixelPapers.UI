@@ -1,7 +1,7 @@
 const TableOfContents = () => {
   return (
     <>
-      <>TableOfContents</>
+      <></>
     </>
   )
 }

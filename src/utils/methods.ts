@@ -1,4 +1,5 @@
 import { GLOBAL_COLORS, PAGE_LEVEL_COLORS } from "./colorSchemes"
+import { AVERAGE_TIME_TO_READ_A_BLOG } from "./constants"
 
 /**
  *
@@ -60,4 +61,28 @@ export const lightenHexColor = (hex: string, lightenValue: number): string => {
 
   // Add the "#" symbol and return the result
   return `#${lighterHex}`
+}
+
+/**
+ *
+ * @param {string} dateString
+ * @returns {string}
+ */
+export const getDateFromString = (dateString: string) => {
+  const x = Date.parse(dateString)
+  const date = new Date(x)
+  return `${date.toLocaleDateString("default", {
+    month: "short",
+  })} ${date.getDate()}`
+}
+
+/**
+ *
+ * @param {number} timeInSeconds
+ * @returns {number}
+ */
+export const secondsToMinutes = (timeInSeconds?: number) => {
+  if (timeInSeconds) {
+    return Math.ceil(timeInSeconds / 60)
+  } else return AVERAGE_TIME_TO_READ_A_BLOG
 }

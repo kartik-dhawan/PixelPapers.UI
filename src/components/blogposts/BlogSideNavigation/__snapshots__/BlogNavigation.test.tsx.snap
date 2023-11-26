@@ -2,7 +2,7 @@
 
 exports[`Blog Side Navigation Component -- it should match the snapshot 1`] = `
 <div
-  className="MuiStack-root className css-12zr2ls-MuiStack-root"
+  className="MuiStack-root className css-17y8gsm-MuiStack-root"
 >
   <div
     className="MuiStack-root css-3y1137-MuiStack-root"

@@ -1,6 +1,6 @@
 export const styles = {
   blogsNavDivider: { borderColor: "#222", margin: "8px 0px", opacity: 0.5 },
-  blogsSideNavWrapper: { position: "sticky", top: 32, margin: "2rem 1rem" },
+  blogsSideNavWrapper: { top: 32, margin: "0rem 1rem 0rem 2rem" },
   blogsSideNavTitle: { fontWeight: 700, textTransform: "uppercase" },
   blogNavList: { display: "flex", flexDirection: "column", gap: "6px" },
   blogNavListItem: {

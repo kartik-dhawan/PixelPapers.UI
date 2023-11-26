@@ -34,7 +34,11 @@ export const getTravelBlogBySlug = async (
       )
 
       if (currentBlog.length !== 0) {
-        return currentBlog[0].fields
+        return {
+          createdAt: currentBlog[0].sys.createdAt,
+          updatedAt: currentBlog[0].sys.updatedAt,
+          ...currentBlog[0].fields,
+        }
       } else {
         return null
       }
