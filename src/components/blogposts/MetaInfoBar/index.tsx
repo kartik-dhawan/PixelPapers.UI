@@ -24,11 +24,12 @@ const MetaInfoBar = ({ currentBlog }: MetaInfoBarProps) => {
         }}
       >
         <Box>
-          {currentBlog.blogMetaInformation
+          {currentBlog.blogMetaInformation &&
+          currentBlog.blogMetaInformation.timeToReadInSeconds
             ? secondsToMinutes(
                 currentBlog.blogMetaInformation?.timeToReadInSeconds,
               )
-            : AVERAGE_TIME_TO_READ_A_BLOG}
+            : `${AVERAGE_TIME_TO_READ_A_BLOG}`}
           &nbsp;min read
         </Box>
         <Box>Modified on : {getDateFromString(currentBlog.updatedAt)}</Box>
