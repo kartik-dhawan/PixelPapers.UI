@@ -11,6 +11,9 @@ export const styles = {
     width: "100%",
     maxWidth: "900px",
     position: "relative",
+    "& a": {
+      objectFit: "cover",
+    },
   },
   customImageTitleText: {
     textAlign: "center",
