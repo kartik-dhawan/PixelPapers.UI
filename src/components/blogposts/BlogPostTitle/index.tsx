@@ -6,7 +6,7 @@ import { styles } from "./styles"
 
 interface BlogPostTitleProps {
   title: string
-  description: any
+  description?: any
   themeColor?: string
 }
 
@@ -34,13 +34,15 @@ const BlogPostTitle = ({
       >
         {title}
       </Box>
-      <Box
-        className={bid + "InitialDesc"}
-        data-testid={bid + "InitialDesc"}
-        sx={styles.blogPostInitialDesc}
-      >
-        {description}
-      </Box>
+      {description && (
+        <Box
+          className={bid + "InitialDesc"}
+          data-testid={bid + "InitialDesc"}
+          sx={styles.blogPostInitialDesc}
+        >
+          {description}
+        </Box>
+      )}
     </Stack>
   )
 }

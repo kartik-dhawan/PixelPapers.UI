@@ -59,7 +59,7 @@ const BlogSideNavigation = ({
           {showBlogLinks ? "Hide" : "Show"}
         </Button>
       </Stack>
-      <List sx={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+      <List sx={styles.blogNavList}>
         {blogs.map((item) => {
           return (
             <Collapse in={showBlogLinks} key={item.sys.id}>

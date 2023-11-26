@@ -17,21 +17,27 @@ export const styles = {
     maxWidth: "1080px",
     textAlign: "center",
     margin: {
-      xs: "2rem 0.5rem 1rem",
+      xs: "2rem 0.5rem 0rem",
       md: "2rem 0rem 1rem",
     },
   },
   blogPostInitialDesc: {
     fontSize: {
-      xs: "18px",
-      md: "20px",
       lg: "22px",
       xl: "24px",
+    },
+    lineHeight: {
+      lg: "36px",
+      xl: "38px",
     },
     textAlign: {
       xs: "justify",
       md: "center",
     },
     maxWidth: "1080px",
+    display: {
+      xs: "none",
+      md: "inline-block",
+    },
   },
 }
