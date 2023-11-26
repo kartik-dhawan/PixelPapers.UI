@@ -60,9 +60,12 @@ const BlogSideNavigation = ({
         </Button>
       </Stack>
       <List sx={styles.blogNavList}>
-        {blogs.map((item) => {
+        {blogs.map((item, index: number) => {
           return (
-            <Collapse in={showBlogLinks} key={`blogs-nav-item-${item.sys.id}`}>
+            <Collapse
+              in={showBlogLinks}
+              key={`blogs-nav-item-${item.sys.id}-${index}`}
+            >
               <ListItem
                 sx={{
                   ...styles.blogNavListItem,

@@ -26,7 +26,6 @@ import { useCallback, useState } from "react"
 
 const CustomBlogImages = ({ blogImages }: { blogImages: any[] }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
-  console.log(blogImages)
 
   const imageLoadingHandler = useCallback(() => {
     setIsImageLoaded(true)
