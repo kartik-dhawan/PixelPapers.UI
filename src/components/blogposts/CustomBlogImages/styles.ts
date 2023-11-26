@@ -11,7 +11,7 @@ export const styles = {
     width: "100%",
     maxWidth: "900px",
     position: "relative",
-    "& a": {
+    "& img": {
       objectFit: "cover",
     },
   },
