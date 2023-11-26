@@ -37,9 +37,8 @@ export interface TravelBlogPost {
   blogThemeColor?: string
   createdAt?: string
   updatedAt?: string
-  landingBlogPageImages?: any[]
-  landingBlogPageContent?: any
   blogMetaInformation?: BlogMetaInformationCtf
+  blogContentAll?: any[]
 }
 
 export interface ContentfulTravelBlog {

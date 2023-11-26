@@ -7,24 +7,29 @@ import { useSelector } from "react-redux"
 import CustomRichTextComponent from "@/components/blogposts/CustomRichTextComponent"
 import CustomBlogImages from "@/components/blogposts/CustomBlogImages"
 import TravelBlogsSkeleton from "@/components/common/Skeletons/TravelBlogsSkeleton"
+import React from "react"
 
 const TravelStories = () => {
   const { currentBlog } = useSelector((state: RootType) => state.travelSlice)
 
   return (
     <Stack className={dmSans.className} sx={{ marginBottom: "3rem" }}>
-      {currentBlog && Object.entries(currentBlog).length !== 0 ? (
-        <>
-          <CustomBlogImages
-            blogImages={currentBlog?.landingBlogPageImages ?? []}
-          />
-          <Box>
-            <CustomRichTextComponent
-              documentObject={currentBlog?.landingBlogPageContent}
-              themeColor={currentBlog?.blogThemeColor}
-            />
-          </Box>
-        </>
+      {currentBlog && currentBlog.blogContentAll ? (
+        currentBlog?.blogContentAll.map((item) => {
+          return (
+            <React.Fragment key={item.sys.id}>
+              <CustomBlogImages
+                blogImages={item.fields.blogSectionImages ?? []}
+              />
+              <Box>
+                <CustomRichTextComponent
+                  documentObject={item.fields.blogSectionContent}
+                  themeColor={currentBlog?.blogThemeColor}
+                />
+              </Box>
+            </React.Fragment>
+          )
+        })
       ) : (
         <TravelBlogsSkeleton />
       )}
