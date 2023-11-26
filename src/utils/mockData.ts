@@ -31,7 +31,7 @@ export const TRAVEL_PAGE_THUMBNAIL_CARD_DATA = {
       description:
         "A picture of sunset from Raghupur fort close to jalori pass",
       file: {
-        url: "//images.ctfassets.net/1v98waf66sfj/6TVtXnjJIZ812Bxm6VBqz5/5b89ce3dced278570a2a663453d69a65/IMG_3749.webp",
+        url: "//images.ctfa/IMG_3749.webp",
         details: {
           size: 71536,
           image: {
@@ -91,7 +91,7 @@ export const BLOG_DATA_MOCK = {
         title: "Jodhpur",
         description: "Mehrangarh Fort's view from The Hosteller.",
         file: {
-          url: "//images.ctfassets.net/1v98waf66sfj/3gVWELo7dWmYDqiDQmKd1C/fc785b65d2ae636556c9622b86f3092a/Snapseed.webp",
+          url: "//images/Snapseed.webp",
           details: {
             size: 864018,
             image: {
@@ -113,3 +113,27 @@ export const BLOG_DATA_MOCK = {
       "In the heart of Rajasthan, Jodhpur stands as a vibrant testament to its regal past. The majestic Mehrangarh Fort and the azure hues of the Blue City vividly recall the cultural splendor that I had the privilege to explore firsthand.",
   },
 }
+
+export const BLOG_IMAGES_ARRAY = [
+  {
+    sys: {
+      id: "6nrhCGsnIMmlg9IKxoi0Dd",
+    },
+    fields: {
+      title: "Serolsar Lake, Jalori pass // Image by the author",
+      description: "An image taken on top of Jalori pass' Serolsar Lake.",
+      file: {
+        url: "//imag/IMG_5873.jpg",
+        details: {
+          size: 193577,
+          image: {
+            width: 828,
+            height: 580,
+          },
+        },
+        fileName: "IMG_5873.jpg",
+        contentType: "image/jpeg",
+      },
+    },
+  },
+]

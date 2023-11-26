@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom Images Component -- should match the snapshot 1`] = `
+<div
+  className="MuiStack-root css-163ljxj-MuiStack-root"
+  id="introduction"
+>
+  <div
+    className="MuiBox-root css-1gi5fv0"
+  >
+    <span
+      className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+      style={
+        {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+    <img
+      alt="An image taken on top of Jalori pass' Serolsar Lake."
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw)"
+      src="/_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=3840&q=75"
+      srcSet="/_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=256&q=75 256w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=384&q=75 384w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fimag%2FIMG_5873.jpg&w=3840&q=75 3840w"
+      style={
+        {
+          "bottom": 0,
+          "color": "transparent",
+          "height": "100%",
+          "left": 0,
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="MuiBox-root css-wpy4uv"
+  >
+    Serolsar Lake, Jalori pass // Image by the author
+  </div>
+</div>
+`;

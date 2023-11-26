@@ -17,7 +17,7 @@ const TravelStories = () => {
       {currentBlog && currentBlog.blogContentAll ? (
         currentBlog?.blogContentAll.map((item) => {
           return (
-            <React.Fragment key={item.sys.id}>
+            <Box id={item.fields.blogSectionId} key={item.sys.id}>
               <CustomBlogImages
                 blogImages={item.fields.blogSectionImages ?? []}
               />
@@ -27,7 +27,7 @@ const TravelStories = () => {
                   themeColor={currentBlog?.blogThemeColor}
                 />
               </Box>
-            </React.Fragment>
+            </Box>
           )
         })
       ) : (
