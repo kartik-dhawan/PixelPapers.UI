@@ -3,12 +3,7 @@ import { CurrentBlogSliceState } from "../interfaces"
 import { OnThisPageLinkObject } from "@/utils/interfaces"
 
 const initialState: CurrentBlogSliceState = {
-  onThisPageData: [
-    {
-      label: "",
-      blogSectionId: "",
-    },
-  ],
+  onThisPageData: null,
 }
 
 const currentBlogSlice = createSlice({

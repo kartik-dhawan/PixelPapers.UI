@@ -15,5 +15,5 @@ export interface TravelSliceState {
 }
 
 export interface CurrentBlogSliceState {
-  onThisPageData: OnThisPageLinkObject[]
+  onThisPageData: OnThisPageLinkObject[] | null
 }
