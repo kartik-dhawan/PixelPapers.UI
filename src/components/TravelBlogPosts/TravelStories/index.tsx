@@ -14,20 +14,25 @@ const TravelStories = () => {
 
   return (
     <Stack className={dmSans.className} sx={{ marginBottom: "3rem" }}>
+      {currentBlog?.blogLandingSectionImage && (
+        <CustomBlogImages
+          blogImages={[currentBlog?.blogLandingSectionImage] ?? []}
+        />
+      )}
       {currentBlog && currentBlog.blogContentAll ? (
         currentBlog?.blogContentAll.map((item) => {
           return (
-            <Box id={item.fields.blogSectionId} key={item.sys.id}>
-              <CustomBlogImages
-                blogImages={item.fields.blogSectionImages ?? []}
-              />
-              <Box>
+            <React.Fragment key={item.sys.id}>
+              <Box id={item.fields.blogSectionId}>
                 <CustomRichTextComponent
                   documentObject={item.fields.blogSectionContent}
                   themeColor={currentBlog?.blogThemeColor}
                 />
+                <CustomBlogImages
+                  blogImages={item.fields.blogSectionImages ?? []}
+                />
               </Box>
-            </Box>
+            </React.Fragment>
           )
         })
       ) : (

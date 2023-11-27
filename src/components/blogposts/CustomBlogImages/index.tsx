@@ -34,7 +34,7 @@ const CustomBlogImages = ({ blogImages }: { blogImages: any[] }) => {
   return (
     <>
       {blogImages.length !== 0 && (
-        <Stack alignItems="center" id="introduction">
+        <Stack alignItems="center">
           <Box sx={styles.customImage}>
             {!isImageLoaded && (
               <Skeleton variant="rectangular" height="100%" width="100%" />

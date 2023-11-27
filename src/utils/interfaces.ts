@@ -39,6 +39,7 @@ export interface TravelBlogPost {
   updatedAt?: string
   blogMetaInformation?: BlogMetaInformationCtf
   blogContentAll?: any[]
+  blogLandingSectionImage?: any
 }
 
 export interface ContentfulTravelBlog {
