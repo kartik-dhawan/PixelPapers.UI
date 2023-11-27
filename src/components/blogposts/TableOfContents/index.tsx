@@ -1,7 +1,15 @@
 "use client"
 
 import { RootType } from "@/redux/store"
-import { Button, Divider, List, ListItem, Stack, SvgIcon } from "@mui/material"
+import {
+  Button,
+  Collapse,
+  Divider,
+  List,
+  ListItem,
+  Stack,
+  SvgIcon,
+} from "@mui/material"
 import { useSelector } from "react-redux"
 import { styles as blogNavStyles } from "../BlogSideNavigation/styles"
 import { styles } from "./styles"
@@ -54,13 +62,12 @@ const TableOfContents = ({ isDesktop }: TOCProps) => {
       >
         TABLE OF CONTENTS
       </Button>
-      {showTOC && (
-        <List>
-          {onThisPageData ? (
-            onThisPageData.map((item: OnThisPageLinkObject, index: number) => {
-              return (
+      <List sx={{ padding: 0 }}>
+        {onThisPageData ? (
+          onThisPageData.map((item: OnThisPageLinkObject, index: number) => {
+            return (
+              <Collapse in={showTOC} key={item.blogSectionId + index}>
                 <ListItem
-                  key={item.blogSectionId + index}
                   sx={{
                     "& a": {
                       color:
@@ -80,12 +87,14 @@ const TableOfContents = ({ isDesktop }: TOCProps) => {
                     {item.label}
                   </Link>
                 </ListItem>
-              )
-            })
-          ) : (
-            <TableOfContentSkeleton />
-          )}
-          {isDesktop && (
+              </Collapse>
+            )
+          })
+        ) : (
+          <TableOfContentSkeleton />
+        )}
+        {isDesktop && (
+          <Collapse in={showTOC}>
             <ListItem
               sx={{
                 marginTop: "1rem",
@@ -100,9 +109,9 @@ const TableOfContents = ({ isDesktop }: TOCProps) => {
                 <NorthIcon />
               </SvgIcon>
             </ListItem>
-          )}
-        </List>
-      )}
+          </Collapse>
+        )}
+      </List>
     </Stack>
   )
 }
