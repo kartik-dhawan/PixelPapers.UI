@@ -1,12 +1,19 @@
+import { GLOBAL_COLORS } from "@/utils/colorSchemes"
+
 export const styles = {
   blogsNavDivider: { borderColor: "#222", margin: "8px 0px", opacity: 0.5 },
   blogsSideNavWrapper: { top: 32, margin: "0rem 1rem 0rem 2rem" },
   blogsSideNavTitle: {
+    color: GLOBAL_COLORS.TEXT_PRIMARY_DARK,
     fontWeight: 700,
     textTransform: "uppercase",
     fontSize: {
       xs: "18px",
       xl: "22px",
+    },
+    // do not remove this
+    "&:hover": {
+      backgroundColor: "transparent",
     },
   },
   blogNavList: {

@@ -39,6 +39,7 @@ export interface TravelBlogPost {
   updatedAt?: string
   blogMetaInformation?: BlogMetaInformationCtf
   blogContentAll?: any[]
+  blogLandingSectionImage?: any
 }
 
 export interface ContentfulTravelBlog {
@@ -52,3 +53,10 @@ export interface TravelBlogContentfulObject {
   fields: TravelBlogPost
   sys: any
 }
+
+export interface OnThisPageLinkObject {
+  label: string
+  blogSectionId: string
+}
+
+export type ClassOrID = `#${string}` | `.${string}`

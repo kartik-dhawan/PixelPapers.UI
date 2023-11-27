@@ -1,13 +1,14 @@
 "use client"
 
 import { addCurrentBlog } from "@/redux/slices/travelSlice"
-import { TravelBlogPost } from "@/utils/interfaces"
+import { OnThisPageLinkObject, TravelBlogPost } from "@/utils/interfaces"
 import { Box, Stack } from "@mui/material"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import TravelStories from "./TravelStories"
 import { dmSans } from "@/utils/fonts"
 import MetaInfoBar from "../blogposts/MetaInfoBar"
+import { updateOnThisPageData } from "@/redux/slices/currentBlogSlice"
 
 interface TravelBlogPostProps {
   currentBlog: TravelBlogPost
@@ -20,6 +21,16 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
   useEffect(() => {
     // adding current blog in redux store
     dispatch(addCurrentBlog(currentBlog))
+
+    // adds data for On This Page link/nav in redux
+    const onThisPageData: OnThisPageLinkObject[] = []
+    currentBlog?.blogContentAll?.map((item) => {
+      onThisPageData.push({
+        label: item.fields.title ?? "",
+        blogSectionId: item.fields.blogSectionId ?? "",
+      })
+    })
+    dispatch(updateOnThisPageData(onThisPageData))
   }, [currentBlog])
 
   return (

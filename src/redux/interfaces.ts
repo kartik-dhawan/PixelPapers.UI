@@ -1,5 +1,6 @@
 import {
   ContentfulFields,
+  OnThisPageLinkObject,
   TravelBlogContentfulObject,
   TravelBlogPost,
 } from "@/utils/interfaces"
@@ -11,4 +12,8 @@ export interface ContentSliceState {
 export interface TravelSliceState {
   blogs: TravelBlogContentfulObject[]
   currentBlog?: TravelBlogPost
+}
+
+export interface CurrentBlogSliceState {
+  onThisPageData: OnThisPageLinkObject[] | null
 }

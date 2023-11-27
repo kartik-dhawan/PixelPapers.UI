@@ -3,7 +3,6 @@
 exports[`Custom Images Component -- should match the snapshot 1`] = `
 <div
   className="MuiStack-root css-163ljxj-MuiStack-root"
-  id="introduction"
 >
   <div
     className="MuiBox-root css-1gi5fv0"
@@ -44,7 +43,7 @@ exports[`Custom Images Component -- should match the snapshot 1`] = `
     />
   </div>
   <div
-    className="MuiBox-root css-wpy4uv"
+    className="MuiBox-root css-mr9ztd"
   >
     Serolsar Lake, Jalori pass // Image by the author
   </div>

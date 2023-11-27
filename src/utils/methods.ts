@@ -1,4 +1,5 @@
 import { GLOBAL_COLORS, PAGE_LEVEL_COLORS } from "./colorSchemes"
+import { ClassOrID } from "./interfaces"
 
 /**
  *
@@ -89,4 +90,23 @@ export const getDateFromString = (dateString?: string) => {
  */
 export const secondsToMinutes = (timeInSeconds: number) => {
   return Math.ceil(timeInSeconds / 60)
+}
+
+/**
+ *
+ * @param {ClassOrID} classOrID
+ * @returns {boolean}
+ */
+export const isElementInViewPort = (classOrID: ClassOrID) => {
+  if (typeof window !== "undefined") {
+    const rect = document.querySelector(classOrID)?.getBoundingClientRect()
+    return (
+      rect &&
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientHeight)
+    )
+  }
 }
