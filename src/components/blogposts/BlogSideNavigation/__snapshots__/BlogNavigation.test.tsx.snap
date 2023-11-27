@@ -8,7 +8,7 @@ exports[`Blog Side Navigation Component -- it should match the snapshot 1`] = `
     className="MuiStack-root css-3y1137-MuiStack-root"
   >
     <div
-      className="MuiBox-root css-1txky2s"
+      className="MuiBox-root css-a3225i"
     >
       More on 
       Travel

@@ -58,3 +58,5 @@ export interface OnThisPageLinkObject {
   label: string
   blogSectionId: string
 }
+
+export type ClassOrID = `#${string}` | `.${string}`

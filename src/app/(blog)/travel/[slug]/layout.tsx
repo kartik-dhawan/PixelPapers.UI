@@ -41,9 +41,13 @@ const TravelBlogLayout = async ({ children, params }: any) => {
           item
           component="section"
           lg={3}
-          sx={{ display: { xs: "none", lg: "inline-block" } }}
+          sx={{
+            display: { xs: "none", lg: "inline-block" },
+            padding: "0rem 2rem",
+            boxSizing: "border-box",
+          }}
         >
-          <TableOfContents />
+          <TableOfContents isDesktop={true} />
         </Grid>
       </Grid>
     </ReduxProvider>

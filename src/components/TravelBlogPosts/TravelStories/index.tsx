@@ -8,6 +8,7 @@ import CustomRichTextComponent from "@/components/blogposts/CustomRichTextCompon
 import CustomBlogImages from "@/components/blogposts/CustomBlogImages"
 import TravelBlogsSkeleton from "@/components/common/Skeletons/TravelBlogsSkeleton"
 import React from "react"
+import TableOfContents from "@/components/blogposts/TableOfContents"
 
 const TravelStories = () => {
   const { currentBlog } = useSelector((state: RootType) => state.travelSlice)
@@ -18,6 +19,16 @@ const TravelStories = () => {
         <CustomBlogImages
           blogImages={[currentBlog?.blogLandingSectionImage] ?? []}
         />
+      )}
+      {currentBlog?.blogContentAll && (
+        <Box
+          sx={{
+            margin: "1rem 0rem",
+            display: { xs: "inline-block", lg: "none" },
+          }}
+        >
+          <TableOfContents isDesktop={false} />
+        </Box>
       )}
       {currentBlog && currentBlog.blogContentAll ? (
         currentBlog?.blogContentAll.map((item) => {
