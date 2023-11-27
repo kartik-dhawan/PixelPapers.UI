@@ -30,7 +30,6 @@ interface TOCProps {
 
 const TableOfContents = ({ isDesktop }: TOCProps) => {
   const path = usePathname()
-  console.log(isDesktop)
 
   const { onThisPageData } = useSelector(
     (state: RootType) => state.currentBlogSlice,
@@ -104,7 +103,7 @@ const TableOfContents = ({ isDesktop }: TOCProps) => {
                 },
               }}
             >
-              <Link href={path}>Go to top </Link>
+              <Link href={`${path}/#body`}>Go to top </Link>
               <SvgIcon sx={{ height: "16px", aspectRatio: "1/1" }}>
                 <NorthIcon />
               </SvgIcon>

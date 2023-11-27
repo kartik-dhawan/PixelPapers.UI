@@ -3,12 +3,15 @@
 import { addCurrentBlog } from "@/redux/slices/travelSlice"
 import { OnThisPageLinkObject, TravelBlogPost } from "@/utils/interfaces"
 import { Box, Stack } from "@mui/material"
-import { useEffect } from "react"
+import React, { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import TravelStories from "./TravelStories"
 import { dmSans } from "@/utils/fonts"
 import MetaInfoBar from "../blogposts/MetaInfoBar"
 import { updateOnThisPageData } from "@/redux/slices/currentBlogSlice"
+import CustomBlogImages from "../blogposts/CustomBlogImages"
+import CustomRichTextComponent from "../blogposts/CustomRichTextComponent"
+import TableOfContents from "../blogposts/TableOfContents"
+import TravelBlogsSkeleton from "../common/Skeletons/TravelBlogsSkeleton"
 
 interface TravelBlogPostProps {
   currentBlog: TravelBlogPost
@@ -52,8 +55,48 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
       className={dmSans.className}
     >
       <MetaInfoBar currentBlog={currentBlog} />
-      {currentBlog.blogType === "article" && <TravelStories />}
-      {currentBlog.blogType === "itinerary" && <Box>ITINERARY</Box>}
+
+      {/* blog content & bars */}
+      <Stack className={dmSans.className} sx={{ marginBottom: "3rem" }}>
+        {currentBlog?.blogLandingSectionImage && (
+          <CustomBlogImages
+            blogImages={[currentBlog?.blogLandingSectionImage] ?? []}
+          />
+        )}
+
+        {/* TOC Section for screen resolution lower than desktop */}
+        {currentBlog?.blogContentAll && (
+          <Box
+            sx={{
+              margin: "1.5rem 0rem 0rem",
+              display: { xs: "inline-block", lg: "none" },
+            }}
+          >
+            <TableOfContents isDesktop={false} />
+          </Box>
+        )}
+
+        {/* blog content */}
+        {currentBlog && currentBlog.blogContentAll ? (
+          currentBlog?.blogContentAll.map((item) => {
+            return (
+              <React.Fragment key={item.sys.id}>
+                <Box id={item.fields.blogSectionId}>
+                  <CustomRichTextComponent
+                    documentObject={item.fields.blogSectionContent}
+                    themeColor={currentBlog?.blogThemeColor}
+                  />
+                  <CustomBlogImages
+                    blogImages={item.fields.blogSectionImages ?? []}
+                  />
+                </Box>
+              </React.Fragment>
+            )
+          })
+        ) : (
+          <TravelBlogsSkeleton />
+        )}
+      </Stack>
     </Stack>
   )
 }
