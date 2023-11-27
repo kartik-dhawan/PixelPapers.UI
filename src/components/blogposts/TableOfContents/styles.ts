@@ -4,7 +4,7 @@ export const styles = {
     textDecoration: "none",
     fontWeight: 500,
     fontSize: {
-      xs: "18px",
+      xs: "16px",
       md: "16px",
       xl: "20px",
     },

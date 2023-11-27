@@ -23,7 +23,7 @@ const TravelStories = () => {
       {currentBlog?.blogContentAll && (
         <Box
           sx={{
-            margin: "1rem 0rem",
+            margin: "1.5rem 0rem 0rem",
             display: { xs: "inline-block", lg: "none" },
           }}
         >
