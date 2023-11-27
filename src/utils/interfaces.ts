@@ -53,3 +53,8 @@ export interface TravelBlogContentfulObject {
   fields: TravelBlogPost
   sys: any
 }
+
+export interface OnThisPageLinkObject {
+  label: string
+  blogSectionId: string
+}
