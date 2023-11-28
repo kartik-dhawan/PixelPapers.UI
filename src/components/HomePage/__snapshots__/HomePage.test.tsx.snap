@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page & all its components -- should match the snapshot 1`] = `
+<section
+  className="MuiBox-root css-n93qtu"
+>
+  <div
+    className="MuiBox-root css-653cb7"
+  >
+    <div
+      className="MuiBox-root css-wf3u97"
+    />
+    <img
+      alt="Image"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw)"
+      src="/_next/image?url=https%3Aundefined&w=3840&q=75"
+      srcSet="/_next/image?url=https%3Aundefined&w=384&q=75 384w, /_next/image?url=https%3Aundefined&w=640&q=75 640w, /_next/image?url=https%3Aundefined&w=750&q=75 750w, /_next/image?url=https%3Aundefined&w=828&q=75 828w, /_next/image?url=https%3Aundefined&w=1080&q=75 1080w, /_next/image?url=https%3Aundefined&w=1200&q=75 1200w, /_next/image?url=https%3Aundefined&w=1920&q=75 1920w, /_next/image?url=https%3Aundefined&w=2048&q=75 2048w, /_next/image?url=https%3Aundefined&w=3840&q=75 3840w"
+      style={
+        {
+          "bottom": 0,
+          "color": "transparent",
+          "height": "100%",
+          "left": 0,
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="MuiStack-root css-1v9ayl4-MuiStack-root"
+  >
+    <h1
+      className="className MuiBox-root css-144oidx"
+    >
+      PIXEL PAPERS
+    </h1>
+    <div
+      className="className MuiBox-root css-10qd5jz"
+    >
+      by
+       
+      <a
+        aria-label="View the instagram profile of Kartik Dhawan (The curator of this website)"
+        href="#!"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+        rel="noreferrer"
+        target="_blank"
+      >
+        kartik-dhawan
+      </a>
+    </div>
+  </div>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium className css-12ptsg4-MuiButtonBase-root-MuiButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onContextMenu={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <a
+      href="/travel"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Start Reading
+    </a>
+    <span
+      className="MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium hello css-1yvb69x-MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="TrendingFlatIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="m22 12-4-4v3H3v2h15v3z"
+          />
+        </svg>
+      </svg>
+    </span>
+  </button>
+</section>
+`;

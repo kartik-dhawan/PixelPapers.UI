@@ -22,8 +22,8 @@ const HeroSection = () => {
           onLoad={() => {
             setIsImageLoaded(true)
           }}
-          src={`https:${content.homePageImage.fields.file.url}`}
-          alt={content.homePageImage.fields.description}
+          src={`https:${content?.homePageImage?.fields.file.url}`}
+          alt={content.homePageImage?.fields.description ?? "Image"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw)"
         />
@@ -43,7 +43,7 @@ const HeroSection = () => {
         <Box className={poppins.className} sx={styles.heroSectionAuthorLink}>
           by{" "}
           <Link
-            href={content.curatedByLink}
+            href={content.curatedByLink ?? "#!"}
             target="_blank"
             rel="noreferrer"
             aria-label="View the instagram profile of Kartik Dhawan (The curator of this website)"
