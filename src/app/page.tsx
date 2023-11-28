@@ -1,14 +1,13 @@
+import HomePage from "@/components/HomePage"
 import ReduxProvider from "@/redux/ReduxProvider"
-import Link from "next/link"
+import { Stack } from "@mui/material"
 
-export default function Home() {
+export default async function Home() {
   return (
-    <main>
+    <Stack component="main">
       <ReduxProvider>
-        <div>
-          Redirect to: <Link href="/travel">Travel</Link> page.
-        </div>
+        <HomePage />
       </ReduxProvider>
-    </main>
+    </Stack>
   )
 }
