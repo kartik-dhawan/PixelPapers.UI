@@ -3,7 +3,14 @@ import TravelBlogThumbnail from "@/components/common/TravelBlogThumbnail"
 import { styles } from "@/components/common/TravelBlogThumbnail/styles"
 import ReduxProvider from "@/redux/ReduxProvider"
 import { PAGE_LEVEL_COLORS } from "@/utils/colorSchemes"
+import { META_DATA_FALLBACK } from "@/utils/constants"
 import { Box, Stack } from "@mui/material"
+
+export const metadata = {
+  metadataBase: new URL("https://blogs.kartikdhawan.in/travel"),
+  title: META_DATA_FALLBACK.TRAVEL.title,
+  description: META_DATA_FALLBACK.TRAVEL.description,
+}
 
 const Travelpage = () => {
   return (
