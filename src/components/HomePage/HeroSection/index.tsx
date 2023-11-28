@@ -56,13 +56,13 @@ const HeroSection = () => {
         className={poppins.className}
         disableRipple
         sx={styles.heroSectionButton}
-        endIcon={
+      >
+        <Link href="/travel">
+          Start Reading
           <SvgIcon className="hello" sx={styles.heroSectionStartReadingSvg}>
             <TrendingFlatIcon />
           </SvgIcon>
-        }
-      >
-        <Link href="/travel">Start Reading</Link>
+        </Link>
       </Button>
     </Box>
   )

@@ -63,7 +63,7 @@ exports[`Home page & all its components -- should match the snapshot 1`] = `
     </div>
   </div>
   <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium className css-12ptsg4-MuiButtonBase-root-MuiButton-root"
+    className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium className css-fivqy-MuiButtonBase-root-MuiButton-root"
     disabled={false}
     onBlur={[Function]}
     onContextMenu={[Function]}
@@ -87,10 +87,6 @@ exports[`Home page & all its components -- should match the snapshot 1`] = `
       onTouchStart={[Function]}
     >
       Start Reading
-    </a>
-    <span
-      className="MuiButton-endIcon MuiButton-iconSizeMedium css-9tj150-MuiButton-endIcon"
-    >
       <svg
         aria-hidden={true}
         className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium hello css-1yvb69x-MuiSvgIcon-root"
@@ -109,7 +105,7 @@ exports[`Home page & all its components -- should match the snapshot 1`] = `
           />
         </svg>
       </svg>
-    </span>
+    </a>
   </button>
 </section>
 `;

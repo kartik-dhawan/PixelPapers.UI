@@ -78,6 +78,11 @@ export const styles = {
     "& a": {
       textDecoration: "none",
       color: GLOBAL_COLORS.TEXT_PRIMARY_DARK,
+      height: "100%",
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     },
     "& span": {
       transition: "200ms all ease",
