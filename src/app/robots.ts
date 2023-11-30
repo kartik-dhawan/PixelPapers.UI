@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
       disallow:
-        process.env.NEXT_PUBLIC_ENVIRONMENT === "dev"
+        process.env.NEXT_PUBLIC_ENVIRONMENT === "prod"
           ? ["/api/", "/not-found.tsx"]
           : "/",
     },
