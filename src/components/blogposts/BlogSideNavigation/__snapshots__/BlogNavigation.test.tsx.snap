@@ -41,68 +41,76 @@ exports[`Blog Side Navigation Component -- it should match the snapshot 1`] = `
   <ul
     className="MuiList-root MuiList-padding css-172qiqt-MuiList-root"
   >
-    <div
-      className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
-      style={
-        {
-          "minHeight": "0px",
-        }
-      }
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
     >
-      <div
-        className="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
-      >
-        <div
-          className="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
-        >
-          <li
-            className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-yld962-MuiListItem-root"
-            disabled={false}
-          >
-            <a
-              aria-label="Click here to go to another article named: The Labyrith of Jodhpur"
-              href="/travel/labyrinth-of-jodhpur"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onTouchStart={[Function]}
-            >
-              The Labyrith of Jodhpur
-            </a>
-          </li>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
-      style={
-        {
-          "minHeight": "0px",
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
         }
-      }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
     >
-      <div
-        className="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
-      >
-        <div
-          className="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
-        >
-          <li
-            className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-yld962-MuiListItem-root"
-            disabled={false}
-          >
-            <a
-              aria-label="Click here to go to another article named: The Labyrith of Jodhpur"
-              href="/travel/labyrinth-of-jodhpur"
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onTouchStart={[Function]}
-            >
-              The Labyrith of Jodhpur
-            </a>
-          </li>
-        </div>
-      </div>
-    </div>
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
   </ul>
 </div>
 `;
