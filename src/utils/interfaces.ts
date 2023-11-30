@@ -22,6 +22,10 @@ export interface SocialMediaLink {
   icon: string
 }
 
+export interface BlogMetaInformationCtf {
+  timeToReadInSeconds: number
+}
+
 export interface TravelBlogPost {
   blogTitle?: string
   blogMetaImage?: any
@@ -29,6 +33,14 @@ export interface TravelBlogPost {
   blogTravelLocation?: string
   blogType?: string
   blogUrlSlug?: string
+  initialBlogDescription?: string
+  blogThemeColor?: string
+  createdAt?: string
+  updatedAt?: string
+  blogMetaInformation?: BlogMetaInformationCtf
+  blogContentAll?: any[]
+  blogLandingSectionImage?: any
+  blogConclusion?: any
 }
 
 export interface ContentfulTravelBlog {
@@ -36,3 +48,16 @@ export interface ContentfulTravelBlog {
   sys: any
   metadata: any
 }
+
+export interface TravelBlogContentfulObject {
+  metadata: any
+  fields: TravelBlogPost
+  sys: any
+}
+
+export interface OnThisPageLinkObject {
+  label: string
+  blogSectionId: string
+}
+
+export type ClassOrID = `#${string}` | `.${string}`

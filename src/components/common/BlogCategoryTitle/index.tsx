@@ -30,6 +30,7 @@ const BlogCategoryTitle = ({
     <Stack
       className={`${category}PageHeadWrapper ${dmSans.className}`}
       data-testid={`${category}PageHeadWrapper`}
+      component="section"
       alignItems="center"
       margin={{ xs: "2rem 0rem", md: "4rem 0rem" }}
     >

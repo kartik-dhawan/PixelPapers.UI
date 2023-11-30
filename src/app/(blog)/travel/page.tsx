@@ -3,7 +3,14 @@ import TravelBlogThumbnail from "@/components/common/TravelBlogThumbnail"
 import { styles } from "@/components/common/TravelBlogThumbnail/styles"
 import ReduxProvider from "@/redux/ReduxProvider"
 import { PAGE_LEVEL_COLORS } from "@/utils/colorSchemes"
+import { META_DATA_FALLBACK } from "@/utils/constants"
 import { Box, Stack } from "@mui/material"
+
+export const metadata = {
+  metadataBase: new URL("https://blogs.kartikdhawan.in/travel"),
+  title: META_DATA_FALLBACK.TRAVEL.title,
+  description: META_DATA_FALLBACK.TRAVEL.description,
+}
 
 const Travelpage = () => {
   return (
@@ -19,13 +26,13 @@ const Travelpage = () => {
           category="travel"
           themeColor={PAGE_LEVEL_COLORS.TRAVEL.BACKGROUND_PRIMARY_DARK}
         />
-        <Box sx={{ marginBottom: "4rem" }}>
+        <Box component="section" sx={{ marginBottom: "4rem" }}>
           <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
             Timeless Stories
           </Box>
           <TravelBlogThumbnail type="stories" largeCardIndex={0} />
         </Box>
-        <Box sx={{ marginBottom: "4rem" }}>
+        <Box component="section" sx={{ marginBottom: "4rem" }}>
           <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
             Blueprints
           </Box>

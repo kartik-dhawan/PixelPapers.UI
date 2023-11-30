@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meta Information Bar Component -- should match the snapshot 1`] = `
+<div
+  className="metInfoBarWrapper MuiBox-root css-0"
+  data-testid="metInfoBarWrapper"
+>
+  <hr
+    className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+  />
+  <div
+    className="MuiStack-root css-ijqb9j-MuiStack-root"
+  >
+    <div
+      className="MuiBox-root css-0"
+    >
+      7
+       min read
+    </div>
+    <div
+      className="MuiBox-root css-0"
+    >
+      Modified on : 
+      Jan 1
+    </div>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+  />
+</div>
+`;

@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Side Navigation Component -- it should match the snapshot 1`] = `
+<div
+  className="MuiStack-root className css-17y8gsm-MuiStack-root"
+>
+  <div
+    className="MuiStack-root css-3y1137-MuiStack-root"
+  >
+    <div
+      className="MuiBox-root css-a3225i"
+    >
+      More on 
+      Travel
+    </div>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1bxgi69-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      Hide
+    </button>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-fullWidth css-9rad00-MuiDivider-root"
+  />
+  <ul
+    className="MuiList-root MuiList-padding css-172qiqt-MuiList-root"
+  >
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+    <li
+      className="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+      disabled={false}
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+        style={
+          {
+            "height": "38px",
+            "width": "100%",
+          }
+        }
+      />
+    </li>
+  </ul>
+</div>
+`;
