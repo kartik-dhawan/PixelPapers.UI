@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
           ? ["/api/", "/not-found.tsx"]
           : "/",
     },
-    sitemap: "https://kartikdhawan.in/sitemap.xml",
+    sitemap: "https://blogs.kartikdhawan.in/sitemap.xml",
   }
 }
