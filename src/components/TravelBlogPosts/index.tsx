@@ -78,10 +78,10 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
 
         {/* blog content */}
         {currentBlog && currentBlog.blogContentAll ? (
-          currentBlog?.blogContentAll.map((item) => {
-            return (
-              <React.Fragment key={item.sys.id}>
-                <Box id={item.fields.blogSectionId}>
+          <>
+            {currentBlog?.blogContentAll.map((item) => {
+              return (
+                <Box id={item.fields.blogSectionId} key={item.sys.id}>
                   <CustomRichTextComponent
                     documentObject={item.fields.blogSectionContent}
                     themeColor={currentBlog?.blogThemeColor}
@@ -90,9 +90,15 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
                     blogImages={item.fields.blogSectionImages ?? []}
                   />
                 </Box>
-              </React.Fragment>
-            )
-          })
+              )
+            })}
+            <Box>
+              <CustomRichTextComponent
+                documentObject={currentBlog?.blogConclusion}
+                themeColor={currentBlog?.blogThemeColor}
+              />
+            </Box>
+          </>
         ) : (
           <TravelBlogsSkeleton />
         )}

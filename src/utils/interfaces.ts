@@ -40,6 +40,7 @@ export interface TravelBlogPost {
   blogMetaInformation?: BlogMetaInformationCtf
   blogContentAll?: any[]
   blogLandingSectionImage?: any
+  blogConclusion?: any
 }
 
 export interface ContentfulTravelBlog {
