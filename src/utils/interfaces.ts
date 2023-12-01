@@ -26,6 +26,13 @@ export interface BlogMetaInformationCtf {
   timeToReadInSeconds: number
 }
 
+export interface BlogAuthorData {
+  username: string
+  usernameLink?: string
+  email?: string
+  bio: string
+}
+
 export interface TravelBlogPost {
   blogTitle?: string
   blogMetaImage?: any
@@ -41,6 +48,8 @@ export interface TravelBlogPost {
   blogContentAll?: any[]
   blogLandingSectionImage?: any
   blogConclusion?: any
+  blogAuthorData?: BlogAuthorData
+  authorImage?: any
 }
 
 export interface ContentfulTravelBlog {

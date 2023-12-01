@@ -1,17 +1,18 @@
+import BlogAuthor from "@/components/blogposts/BlogAuthor"
 import BlogPostTitle from "@/components/blogposts/BlogPostTitle"
 import BlogSideNavigation from "@/components/blogposts/BlogSideNavigation"
 import TableOfContents from "@/components/blogposts/TableOfContents"
 import { getContentfulData, getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
-import { Grid } from "@mui/material"
+import { Box, Grid } from "@mui/material"
 import Script from "next/script"
 
 const TravelBlogLayout = async ({ children, params }: any) => {
   const currentBlog = await getTravelBlogBySlug(params?.slug ?? "")
-  const blogs: any = await getContentfulData()
+  const content: any = await getContentfulData()
   const allTravelBlogs = [
-    ...blogs.travelStoryBlogs,
-    ...blogs.travelItineraryBlogs,
+    ...content.travelStoryBlogs,
+    ...content.travelItineraryBlogs,
   ]
 
   return (
@@ -34,10 +35,10 @@ const TravelBlogLayout = async ({ children, params }: any) => {
         description={currentBlog?.initialBlogDescription ?? ""}
         themeColor={currentBlog?.blogThemeColor}
       />
-      <Grid container spacing={2}>
+      <Grid container spacing={2} component="article">
         <Grid
           item
-          component="section"
+          component="aside"
           lg={3}
           md={4}
           sx={{ display: { xs: "none", md: "inline-block" } }}
@@ -47,6 +48,22 @@ const TravelBlogLayout = async ({ children, params }: any) => {
             themeColor={currentBlog?.blogThemeColor}
             blogs={allTravelBlogs}
           />
+          <Box
+            sx={{
+              padding: "0rem 2rem",
+              boxSizing: "border-box",
+              marginTop: "3rem",
+              position: "sticky",
+              top: 32,
+              display: {
+                xs: "none",
+                md: "inline-block",
+                lg: "none",
+              },
+            }}
+          >
+            <TableOfContents isDesktop={true} />
+          </Box>
         </Grid>
         <Grid item component="section" lg={6} md={8}>
           {children}
@@ -64,6 +81,9 @@ const TravelBlogLayout = async ({ children, params }: any) => {
           <TableOfContents isDesktop={true} />
         </Grid>
       </Grid>
+      {currentBlog && (
+        <BlogAuthor currentBlog={currentBlog} content={content} />
+      )}
     </ReduxProvider>
   )
 }
