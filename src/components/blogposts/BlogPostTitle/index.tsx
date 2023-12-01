@@ -22,6 +22,7 @@ const BlogPostTitle = ({
       className={bid + "HeadWrapper " + dmSans.className}
       data-testid={bid + "HeadWrapper"}
       sx={styles.blogPostHeadWrapper}
+      component="header"
     >
       <CuratedBy
         themeColor={themeColor ?? GLOBAL_COLORS.BACKGROUND_PRIMARY_DARK}

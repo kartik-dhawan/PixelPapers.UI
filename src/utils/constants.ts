@@ -14,3 +14,8 @@ export const META_DATA_FALLBACK = {
       "A blogging website with an extra touch of emotions & real experiences. Unlike mechanical blogs on huge blogging websites, here you will feel home.",
   },
 }
+
+export const ANONYMOUS_AUTHOR_DATA = {
+  USERNAME: "Anonymous",
+  BIO: `"There are people, who are better unknown" - Hozier`, // eslint-disable-line
+}
