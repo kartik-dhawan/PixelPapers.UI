@@ -3,6 +3,7 @@ import { getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
 import { Box } from "@mui/material"
 import { Metadata, ResolvingMetadata } from "next"
+import { notFound } from "next/navigation"
 
 interface TravelSlugParams {
   params: { slug: string }
@@ -32,6 +33,11 @@ export async function generateMetadata(
 const TravelBlogPage = async ({ params }: TravelSlugParams) => {
   // gets current blog directly from contentful
   const currentBlog = await getTravelBlogBySlug(params?.slug ?? "")
+
+  if (!currentBlog) {
+    // if there is not blog, throw 404 page error
+    return notFound()
+  }
 
   return (
     <ReduxProvider>
