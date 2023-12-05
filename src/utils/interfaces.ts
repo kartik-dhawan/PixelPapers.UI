@@ -64,9 +64,14 @@ export interface TravelBlogContentfulObject {
   sys: any
 }
 
-export interface OnThisPageLinkObject {
+export type OnThisPageLinkObject = {
   label: string
   blogSectionId: string
 }
 
 export type ClassOrID = `#${string}` | `.${string}`
+
+export type ErrorPage = {
+  error: Error
+  reset?: () => void
+}

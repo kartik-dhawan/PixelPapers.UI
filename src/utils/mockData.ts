@@ -137,3 +137,8 @@ export const BLOG_IMAGES_ARRAY = [
     },
   },
 ]
+
+export const MOCK_ERROR = {
+  name: "Err",
+  message: "Error message",
+}
