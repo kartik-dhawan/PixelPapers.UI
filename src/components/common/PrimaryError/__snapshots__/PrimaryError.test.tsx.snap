@@ -2,7 +2,7 @@
 
 exports[`Primary error component -- should match the snapshot 1`] = `
 <section
-  className="MuiBox-root css-b182f3"
+  className="MuiBox-root css-58c4w1"
 >
   <div
     className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-filledError MuiAlert-filled css-15i39sq-MuiPaper-root-MuiAlert-root"

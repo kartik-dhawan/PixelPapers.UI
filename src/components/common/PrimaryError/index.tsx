@@ -18,7 +18,8 @@ const PrimaryError = ({ error, reset }: ErrorPage) => {
     <Box
       padding="1rem 1rem"
       boxSizing="border-box"
-      maxWidth="100vw"
+      width="100%"
+      maxWidth="100%"
       component="section"
     >
       <Alert severity="error" variant="filled" sx={{ boxSizing: "border-box" }}>
