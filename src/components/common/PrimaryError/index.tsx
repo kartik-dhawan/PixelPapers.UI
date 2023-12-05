@@ -4,32 +4,22 @@ import { DEFAULT_EMAIL } from "@/utils/constants"
 import { ErrorPage } from "@/utils/interfaces"
 import { Alert, AlertTitle, Box, Button, Collapse, Stack } from "@mui/material"
 import Link from "next/link"
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useState } from "react"
 import { styles } from "./styles"
-import { useRouter } from "next/navigation"
 
 const PrimaryError = ({ error, reset }: ErrorPage) => {
-  const router = useRouter()
-
   const [viewErrorDetails, setViewErrorDetails] = useState<boolean>()
 
   const toggleErrorDetails = useCallback(() => {
     setViewErrorDetails((prev) => !prev)
   }, [])
 
-  useEffect(() => {
-    // catch the 404 error
-    // if there is no page found then push to 404 page
-    if (error.message === "NEXT_NOT_FOUND") {
-      router.push("/not-found")
-    }
-  }, [error])
-
   return (
     <Box
       padding="1rem 1rem"
       boxSizing="border-box"
-      maxWidth="100vw"
+      width="100%"
+      maxWidth="100%"
       component="section"
     >
       <Alert severity="error" variant="filled" sx={{ boxSizing: "border-box" }}>

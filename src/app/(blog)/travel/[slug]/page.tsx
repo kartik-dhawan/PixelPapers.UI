@@ -1,9 +1,8 @@
 import TravelBlogPosts from "@/components/TravelBlogPosts"
+import Redirection404 from "@/components/blogposts/Redirection404"
 import { getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
-import { Box } from "@mui/material"
 import { Metadata, ResolvingMetadata } from "next"
-import { notFound } from "next/navigation"
 
 interface TravelSlugParams {
   params: { slug: string }
@@ -34,17 +33,12 @@ const TravelBlogPage = async ({ params }: TravelSlugParams) => {
   // gets current blog directly from contentful
   const currentBlog = await getTravelBlogBySlug(params?.slug ?? "")
 
-  if (!currentBlog) {
-    // if there is not blog, throw 404 page error
-    return notFound()
-  }
-
   return (
     <ReduxProvider>
       {currentBlog ? (
         <TravelBlogPosts currentBlog={currentBlog} slug={params.slug} />
       ) : (
-        <Box>The Page does not exist.</Box>
+        <Redirection404 />
       )}
     </ReduxProvider>
   )
