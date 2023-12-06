@@ -48,7 +48,14 @@ const Travelpage = async () => {
         </Box>
         <RecommendedBlogs blogs={allTravelBlogs} path="/travel" fullWidth>
           <Box
-            sx={{ color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER, margin: "1rem" }}
+            sx={{
+              color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
+              margin: "1rem",
+              fontSize: {
+                xs: "16px",
+                xl: "20px",
+              },
+            }}
           >
             Explore all travel blogs.
           </Box>

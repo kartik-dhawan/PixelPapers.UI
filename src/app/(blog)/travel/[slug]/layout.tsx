@@ -90,7 +90,16 @@ const TravelBlogLayout = async ({ children, params }: any) => {
 
       <RecommendedBlogs blogs={allTravelBlogs}>
         {/* Children  of this component gets rendered as the title */}
-        <Box sx={{ color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER, margin: "1rem" }}>
+        <Box
+          sx={{
+            color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
+            margin: "1rem",
+            fontSize: {
+              xs: "16px",
+              xl: "20px",
+            },
+          }}
+        >
           Read More on travel
         </Box>
       </RecommendedBlogs>
