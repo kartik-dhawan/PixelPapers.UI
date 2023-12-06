@@ -3,7 +3,7 @@
 exports[`Custom RecommendedBlogs component -- should match the snapshot 1`] = `
 [
   <div
-    className="recommendationsSectionWrapper className MuiBox-root css-1tdw6cu"
+    className="recommendationsSectionWrapper className MuiBox-root css-15un6cr"
   >
     <div
       className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-sm-4 MuiGrid-spacing-md-4 recommendationsCardContainer css-it53zt-MuiGrid-root"
@@ -25,6 +25,19 @@ exports[`Custom RecommendedBlogs component -- should match the snapshot 1`] = `
             <div
               className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-5 recommendationsCardImageWrapper css-4ez996-MuiGrid-root"
             >
+              <div
+                className="MuiBox-root css-kq8hvf"
+              >
+                <span
+                  className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-153n0d3-MuiSkeleton-root"
+                  style={
+                    {
+                      "height": "100%",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </div>
               <img
                 alt=""
                 className="recommendationsCardImage"

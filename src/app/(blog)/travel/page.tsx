@@ -4,7 +4,7 @@ import TravelBlogThumbnail from "@/components/common/TravelBlogThumbnail"
 import { styles } from "@/components/common/TravelBlogThumbnail/styles"
 import { getContentfulData } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
-import { PAGE_LEVEL_COLORS } from "@/utils/colorSchemes"
+import { GLOBAL_COLORS, PAGE_LEVEL_COLORS } from "@/utils/colorSchemes"
 import { META_DATA_FALLBACK } from "@/utils/constants"
 import { Box, Stack } from "@mui/material"
 
@@ -46,7 +46,13 @@ const Travelpage = async () => {
           </Box>
           <TravelBlogThumbnail type="itineraries" largeCardIndex={2} />
         </Box>
-        <RecommendedBlogs blogs={allTravelBlogs} fullWidth path="/travel" />
+        <RecommendedBlogs blogs={allTravelBlogs} path="/travel" fullWidth>
+          <Box
+            sx={{ color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER, margin: "1rem" }}
+          >
+            Explore all travel blogs.
+          </Box>
+        </RecommendedBlogs>
       </Stack>
     </ReduxProvider>
   )

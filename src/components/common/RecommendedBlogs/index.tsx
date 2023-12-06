@@ -6,17 +6,27 @@ import {
   AVERAGE_TIME_TO_READ_A_BLOG,
 } from "@/utils/constants"
 import { dmSans } from "@/utils/fonts"
-import { TravelBlogContentfulObject } from "@/utils/interfaces"
+import { ChildrenType, TravelBlogContentfulObject } from "@/utils/interfaces"
 import { secondsToMinutes } from "@/utils/methods"
-import { Avatar, Box, Divider, Grid, Link, Stack } from "@mui/material"
+import {
+  Avatar,
+  Box,
+  Divider,
+  Grid,
+  Link,
+  Skeleton,
+  Stack,
+} from "@mui/material"
 import Image from "next/image"
 import { useSelector } from "react-redux"
 import { styles } from "./styles"
+import { useState } from "react"
 
 interface RecommendedBlogsProps {
   blogs: TravelBlogContentfulObject[]
   fullWidth?: boolean
   path?: `/${string}`
+  children?: ChildrenType
 }
 
 /**
@@ -25,6 +35,7 @@ interface RecommendedBlogsProps {
  * ** blogs - the blogs data
  * ** fullWidth - should the blog cards be full width or cards in multiple columns
  * ** path - the path to append to the blog url like '/travel' will be appended to the sluh url /[ghosts-of-shoja]
+ * ** children - Children  of this component gets rendered as the title
  *
  */
 
@@ -32,16 +43,24 @@ const RecommendedBlogs = ({
   blogs,
   fullWidth = false, // default value false, it will render square cards
   path,
+  children,
 }: RecommendedBlogsProps) => {
   const rid = "recommendations"
 
   const { content } = useSelector((state: RootType) => state.contentSlice)
+
+  const [imageLoadingStatus, setImageLoadingStatus] = useState(false)
+
+  const imageLoadingHandler = () => {
+    setImageLoadingStatus(true)
+  }
 
   return (
     <Box
       className={rid + "SectionWrapper " + dmSans.className}
       sx={styles.recommendationsSectionWrapper}
     >
+      <>{children}</>
       <Grid
         container
         spacing={{ xs: 2, sm: 4, md: 4 }}
@@ -97,12 +116,26 @@ const RecommendedBlogs = ({
                       },
                     }}
                   >
+                    {!imageLoadingStatus && (
+                      <Box
+                        padding="1rem"
+                        boxSizing="border-box"
+                        height="100%"
+                        width="100%"
+                      >
+                        <Skeleton
+                          variant="rectangular"
+                          height="100%"
+                          width="100%"
+                        />
+                      </Box>
+                    )}
                     <Image
                       className={rid + "CardImage"}
                       src={`https:${item.fields.blogMetaImage.fields.file.url}`}
                       alt=""
                       fill
-                      style={{}}
+                      onLoad={imageLoadingHandler}
                     />
                   </Grid>
                   <Grid

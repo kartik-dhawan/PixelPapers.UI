@@ -5,6 +5,7 @@ import TableOfContents from "@/components/blogposts/TableOfContents"
 import RecommendedBlogs from "@/components/common/RecommendedBlogs"
 import { getContentfulData, getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
+import { GLOBAL_COLORS } from "@/utils/colorSchemes"
 import { Box, Grid } from "@mui/material"
 import Script from "next/script"
 
@@ -87,7 +88,12 @@ const TravelBlogLayout = async ({ children, params }: any) => {
         <BlogAuthor currentBlog={currentBlog} content={content} />
       )}
 
-      <RecommendedBlogs blogs={allTravelBlogs} />
+      <RecommendedBlogs blogs={allTravelBlogs}>
+        {/* Children  of this component gets rendered as the title */}
+        <Box sx={{ color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER, margin: "1rem" }}>
+          Read More on travel
+        </Box>
+      </RecommendedBlogs>
     </ReduxProvider>
   )
 }
