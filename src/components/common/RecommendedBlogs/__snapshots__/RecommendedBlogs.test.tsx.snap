@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom RecommendedBlogs component -- should match the snapshot 1`] = `
+[
+  <div
+    className="recommendationsSectionWrapper className MuiBox-root css-1tdw6cu"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-spacing-sm-4 MuiGrid-spacing-md-4 recommendationsCardContainer css-it53zt-MuiGrid-root"
+    >
+      <div
+        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 recommendationsCard css-1xmv5g-MuiGrid-root"
+      >
+        <a
+          aria-label="A link to open the blog titled: The Labyrith of Jodhpur, in next tab"
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
+          href="//labyrinth-of-jodhpur"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          rel="noreferrer"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-container recommendationsCardContentWrapper css-1sgmr83-MuiGrid-root"
+          >
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-5 recommendationsCardImageWrapper css-4ez996-MuiGrid-root"
+            >
+              <img
+                alt=""
+                className="recommendationsCardImage"
+                data-nimg="fill"
+                decoding="async"
+                loading="lazy"
+                onError={[Function]}
+                onLoad={[Function]}
+                sizes="100vw"
+                src="/_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=3840&q=75"
+                srcSet="/_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=640&q=75 640w, /_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=750&q=75 750w, /_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=828&q=75 828w, /_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=1080&q=75 1080w, /_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=1200&q=75 1200w, /_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=1920&q=75 1920w, /_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=2048&q=75 2048w, /_next/image?url=https%3A%2F%2Fimages%2FSnapseed.webp&w=3840&q=75 3840w"
+                style={
+                  {
+                    "bottom": 0,
+                    "color": "transparent",
+                    "height": "100%",
+                    "left": 0,
+                    "objectFit": undefined,
+                    "objectPosition": undefined,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 MuiGrid-grid-md-7 recommendationsCardTextContent css-1gz10iw-MuiGrid-root"
+            >
+              <div
+                className="MuiStack-root recommendationsCardAuthorDetails css-1s4zrlh-MuiStack-root"
+              >
+                <div
+                  className="MuiAvatar-root MuiAvatar-circular css-u9up2x-MuiAvatar-root"
+                >
+                  <img
+                    alt="Author of the blog"
+                    className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+                    src="https:undefined"
+                  />
+                </div>
+                <div
+                  className="MuiBox-root css-1pvqewc"
+                >
+                  Anonymous
+                </div>
+              </div>
+              <div
+                className="recommendationsCardBlogHead MuiBox-root css-0"
+              >
+                <h3
+                  className="recommendationsCardBlogTitle MuiBox-root css-1rsd7ub"
+                >
+                  The Labyrith of Jodhpur
+                </h3>
+                <div
+                  className="recommendationsCardBlogDescription MuiBox-root css-13tgwgo"
+                >
+                  In the heart of Rajasthan, Jodhpur stands as a vibrant testament to its regal past. The majestic Mehrangarh Fort and the azure hues of the Blue City vividly recall the cultural splendor that I had the privilege to explore firsthand.
+                </div>
+              </div>
+              <div
+                className="MuiStack-root recommendationsCardBlogMetaInformation css-1rg0q2c-MuiStack-root"
+              >
+                <span>
+                  7
+                   min read
+                </span>
+                <span
+                  style={
+                    {
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  article
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <hr
+          className="MuiDivider-root MuiDivider-fullWidth recommendationsCardDivider css-ejq953-MuiDivider-root"
+        />
+      </div>
+    </div>
+  </div>,
+  ",",
+]
+`;

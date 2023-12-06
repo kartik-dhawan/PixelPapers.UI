@@ -137,7 +137,8 @@ const RecommendedBlogs = ({
                         {item.fields.blogAuthorData
                           ? item.fields.blogAuthorData?.username ??
                             ANONYMOUS_AUTHOR_DATA.USERNAME
-                          : content.myAuthorProfileData.username}
+                          : content.myAuthorProfileData?.username ??
+                            ANONYMOUS_AUTHOR_DATA.USERNAME}
                       </Box>
                     </Stack>
                     <Box className={rid + "CardBlogHead"}>
