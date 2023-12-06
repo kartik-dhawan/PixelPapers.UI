@@ -20,7 +20,7 @@ import {
 import Image from "next/image"
 import { useSelector } from "react-redux"
 import { styles } from "./styles"
-import { useState } from "react"
+import { useCallback, useState } from "react"
 
 interface RecommendedBlogsProps {
   blogs: TravelBlogContentfulObject[]
@@ -51,9 +51,9 @@ const RecommendedBlogs = ({
 
   const [imageLoadingStatus, setImageLoadingStatus] = useState(false)
 
-  const imageLoadingHandler = () => {
+  const imageLoadingHandler = useCallback(() => {
     setImageLoadingStatus(true)
-  }
+  }, [])
 
   return (
     <Box
@@ -135,6 +135,7 @@ const RecommendedBlogs = ({
                       src={`https:${item.fields.blogMetaImage.fields.file.url}`}
                       alt=""
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw)"
                       onLoad={imageLoadingHandler}
                     />
                   </Grid>
