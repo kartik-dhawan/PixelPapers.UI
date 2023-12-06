@@ -42,12 +42,7 @@ const BlogAuthor = ({ currentBlog, content }: BlogAuthorProps) => {
       // display it as my own blog if the blogAuthorFields are empty
       setAuthor(content.myAuthorProfileData)
     }
-    console.log(currentBlog.blogAuthorData)
   }, [content, currentBlog])
-
-  useEffect(() => {
-    console.log(author)
-  }, [author])
 
   useEffect(() => {
     if (currentBlog.authorImage && currentBlog.blogAuthorData) {

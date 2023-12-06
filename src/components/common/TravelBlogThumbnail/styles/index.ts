@@ -85,5 +85,7 @@ export const styles = {
     },
     boxSizing: "border-box",
     fontSize: "20px",
+    fontWeight: 500,
+    textAlign: "center",
   },
 }
