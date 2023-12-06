@@ -82,12 +82,12 @@ const TravelBlogLayout = async ({ children, params }: any) => {
           <TableOfContents isDesktop={true} />
         </Grid>
       </Grid>
+
       {currentBlog && (
         <BlogAuthor currentBlog={currentBlog} content={content} />
       )}
-      <Box sx={{ backgroundColor: "#f9f9f9" }}>
-        <RecommendedBlogs blogs={allTravelBlogs} gridColumns={2} />
-      </Box>
+
+      <RecommendedBlogs blogs={allTravelBlogs} />
     </ReduxProvider>
   )
 }

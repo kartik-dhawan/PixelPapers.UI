@@ -46,13 +46,7 @@ const Travelpage = async () => {
           </Box>
           <TravelBlogThumbnail type="itineraries" largeCardIndex={2} />
         </Box>
-        <Box sx={{ backgroundColor: "#f9f9f9" }}>
-          <RecommendedBlogs
-            blogs={allTravelBlogs}
-            gridColumns={2}
-            path="/travel"
-          />
-        </Box>
+        <RecommendedBlogs blogs={allTravelBlogs} fullWidth path="/travel" />
       </Stack>
     </ReduxProvider>
   )

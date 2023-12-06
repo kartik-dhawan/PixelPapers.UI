@@ -1,7 +1,6 @@
 "use client"
 
 import { RootType } from "@/redux/store"
-import { GLOBAL_COLORS } from "@/utils/colorSchemes"
 import {
   ANONYMOUS_AUTHOR_DATA,
   AVERAGE_TIME_TO_READ_A_BLOG,
@@ -12,45 +11,46 @@ import { secondsToMinutes } from "@/utils/methods"
 import { Avatar, Box, Divider, Grid, Link, Stack } from "@mui/material"
 import Image from "next/image"
 import { useSelector } from "react-redux"
+import { styles } from "./styles"
 
 interface RecommendedBlogsProps {
   blogs: TravelBlogContentfulObject[]
-  gridColumns: number
+  fullWidth?: boolean
   path?: `/${string}`
 }
 
+/**
+ * A custom reusable component for recommendation section.
+ * @param {RecommendedBlogsProps} Props
+ * ** blogs - the blogs data
+ * ** fullWidth - should the blog cards be full width or cards in multiple columns
+ * ** path - the path to append to the blog url like '/travel' will be appended to the sluh url /[ghosts-of-shoja]
+ *
+ */
+
 const RecommendedBlogs = ({
   blogs,
-  gridColumns,
+  fullWidth = false, // default value false, it will render square cards
   path,
 }: RecommendedBlogsProps) => {
-  const { content } = useSelector((state: RootType) => state.contentSlice)
+  const rid = "recommendations"
 
-  console.log(gridColumns)
+  const { content } = useSelector((state: RootType) => state.contentSlice)
 
   return (
     <Box
-      className={dmSans.className}
-      sx={{
-        padding: {
-          xs: "2rem",
-          sm: "4rem",
-          md: "2rem",
-        },
-        boxSizing: "border-box",
-        // backgroundColor: "#f9f9f9",
-        display: "flex",
-        justifyContent: "center",
-        width: "100vw",
-      }}
+      className={rid + "SectionWrapper " + dmSans.className}
+      sx={styles.recommendationsSectionWrapper}
     >
       <Grid
         container
         spacing={{ xs: 2, sm: 4, md: 4 }}
+        className={rid + "CardContainer"}
         sx={{
           maxWidth: {
             xs: "720px",
-            xl: "880px",
+            md: fullWidth ? "880px" : "720px",
+            xl: "900px",
           },
         }}
       >
@@ -58,17 +58,11 @@ const RecommendedBlogs = ({
           return (
             <Grid
               item
+              className={rid + "Card"}
               key={item.sys.id}
               xs={12}
-              md={6}
-              sx={{
-                minHeight: "300px",
-                margin: "1rem 0rem",
-                "& a": {
-                  textDecoration: "none",
-                  color: "#222",
-                },
-              }}
+              md={fullWidth ? 12 : 6}
+              sx={styles.recommendationsCard}
             >
               <Link
                 href={
@@ -79,138 +73,128 @@ const RecommendedBlogs = ({
                 rel="noreferrer"
                 aria-label={`A link to open the blog titled: ${item.fields.blogMetaTitle}, in next tab`}
               >
-                <Stack sx={{ height: "100%" }} gap={{ xs: "12px", md: "12px" }}>
-                  <Box
-                    className="cardImage"
+                <Grid
+                  className={rid + "CardContentWrapper"}
+                  container
+                  sx={{ height: "100%" }}
+                >
+                  <Grid
+                    item
+                    xs={12}
+                    sm={5}
+                    md={fullWidth ? 5 : 12}
+                    className={rid + "CardImageWrapper"}
                     sx={{
-                      position: "relative",
-                      maxWidth: "100%",
-                      height: {
-                        xs: "200px",
-                        sm: "250px",
-                        md: "200px",
-                        xl: "250px",
-                      },
+                      ...styles.recommendationsCardImageWrapper,
                       "& img": {
-                        objectFit: "cover",
-                        objectPosition: {
-                          xs: "0% 60%",
-                          sm: "0% 70%",
-                        },
+                        ...styles.recommendationsCardImage,
+                        padding: fullWidth
+                          ? {
+                              sm: "8px",
+                              md: "1rem",
+                            }
+                          : {},
                       },
                     }}
                   >
                     <Image
+                      className={rid + "CardImage"}
                       src={`https:${item.fields.blogMetaImage.fields.file.url}`}
                       alt=""
                       fill
+                      style={{}}
                     />
-                  </Box>
-                  <Stack
-                    direction="row"
-                    alignItems="center"
-                    gap="8px"
-                    margin="0px 0px"
-                    className="cardAvatar"
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={7}
+                    md={fullWidth ? 7 : 12}
+                    className={rid + "CardTextContent"}
+                    sx={styles.recommendationsCardTextContent}
                   >
-                    <Avatar
-                      src={`https:${
-                        item.fields.blogAuthorData
-                          ? item.fields.authorImage?.fields.file.url ?? ""
-                          : content.myProfileImage?.fields.file.url
-                      }`}
-                      alt={"Author of the blog"}
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      gap="8px"
+                      margin="0px 0px"
+                      className={rid + "CardAuthorDetails"}
+                    >
+                      <Avatar
+                        src={`https:${
+                          item.fields.blogAuthorData
+                            ? item.fields.authorImage?.fields.file.url ?? ""
+                            : content.myProfileImage?.fields.file.url
+                        }`}
+                        alt={"Author of the blog"}
+                        sx={{
+                          bgcolor: item.fields.blogThemeColor,
+                          height: "24px",
+                          width: "24px",
+                        }}
+                      />
+                      <Box sx={styles.recommendationsCardAuthorUsername}>
+                        {item.fields.blogAuthorData
+                          ? item.fields.blogAuthorData?.username ??
+                            ANONYMOUS_AUTHOR_DATA.USERNAME
+                          : content.myAuthorProfileData.username}
+                      </Box>
+                    </Stack>
+                    <Box className={rid + "CardBlogHead"}>
+                      <Box
+                        component="h3"
+                        className={rid + "CardBlogTitle"}
+                        sx={styles.recommendationsCardBlogTitle}
+                      >
+                        {item.fields.blogMetaTitle}
+                      </Box>
+                      <Box
+                        className={rid + "CardBlogDescription"}
+                        sx={{
+                          ...styles.recommendationsCardBlogDescription,
+                          WebkitLineClamp: {
+                            xs: fullWidth ? 3 : 2,
+                            sm: 3,
+                            md: fullWidth ? 3 : 2,
+                          },
+                        }}
+                      >
+                        {item.fields.initialBlogDescription}
+                      </Box>
+                    </Box>
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      className={rid + "CardBlogMetaInformation"}
                       sx={{
-                        bgcolor: item.fields.blogThemeColor,
-                        height: "24px",
-                        width: "24px",
-                      }}
-                    />
-                    <Box
-                      sx={{
-                        fontSize: {
-                          xs: "14px",
-                          sm: "16px",
-                          md: "14px",
-                          xl: "18px",
+                        ...styles.recommendationsCardBlogMetaInfo,
+                        marginTop: {
+                          xs: fullWidth ? "auto" : "1rem",
+                          sm: "auto",
+                          md: fullWidth ? "auto" : "1rem",
                         },
                       }}
                     >
-                      {item.fields.blogAuthorData
-                        ? item.fields.blogAuthorData?.username ??
-                          ANONYMOUS_AUTHOR_DATA.USERNAME
-                        : content.myAuthorProfileData.username}
-                    </Box>
-                  </Stack>
-                  <Box className="cardBody">
-                    <Box
-                      component="h3"
-                      sx={{
-                        margin: "4px 0px",
-                        fontSize: {
-                          xs: "22px",
-                          sm: "26px",
-                          md: "22px",
-                          xl: "26px",
-                        },
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        letterSpacing: "-1px",
-                        fontWeight: 600,
-                      }}
-                    >
-                      {item.fields.blogMetaTitle}
-                    </Box>
-                    <Box
-                      sx={{
-                        fontWeight: 300,
-                        display: "-webkit-box",
-                        overflow: "hidden",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                        fontSize: {
-                          xs: "18px",
-                          sm: "20px",
-                          md: "18px",
-                          xl: "22px",
-                        },
-                        color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
-                      }}
-                    >
-                      {item.fields.initialBlogDescription}
-                    </Box>
-                  </Box>
-                  <Stack
-                    direction="row"
-                    justifyContent="space-between"
-                    sx={{
-                      fontSize: {
-                        xs: "14px",
-                        sm: "16px",
-                        md: "14px",
-                        xl: "18px",
-                      },
-                      color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
-                    }}
-                  >
-                    <span>
-                      {secondsToMinutes(
-                        item.fields.blogMetaInformation?.timeToReadInSeconds ??
-                          AVERAGE_TIME_TO_READ_A_BLOG * 60,
-                      )}
-                      &nbsp;min read
-                    </span>
-                    <span style={{ textTransform: "uppercase" }}>
-                      {item.fields.blogType}
-                    </span>
-                  </Stack>
-                </Stack>
+                      <span>
+                        {secondsToMinutes(
+                          item.fields.blogMetaInformation
+                            ?.timeToReadInSeconds ??
+                            AVERAGE_TIME_TO_READ_A_BLOG * 60,
+                        )}
+                        &nbsp;min read
+                      </span>
+                      <span style={{ textTransform: "uppercase" }}>
+                        {item.fields.blogType}
+                      </span>
+                    </Stack>
+                  </Grid>
+                </Grid>
               </Link>
               <Divider
+                className={rid + "CardDivider"}
                 sx={{
-                  marginTop: "12px",
-                  display: { xs: "flex", md: "none" },
+                  marginTop: "16px",
+                  display: { xs: "flex", md: fullWidth ? "flex" : "none" },
                 }}
               />
             </Grid>
