@@ -2,6 +2,7 @@ import BlogAuthor from "@/components/blogposts/BlogAuthor"
 import BlogPostTitle from "@/components/blogposts/BlogPostTitle"
 import BlogSideNavigation from "@/components/blogposts/BlogSideNavigation"
 import TableOfContents from "@/components/blogposts/TableOfContents"
+import RecommendedBlogs from "@/components/common/RecommendedBlogs"
 import { getContentfulData, getTravelBlogBySlug } from "@/lib/methods"
 import ReduxProvider from "@/redux/ReduxProvider"
 import { Box, Grid } from "@mui/material"
@@ -84,6 +85,9 @@ const TravelBlogLayout = async ({ children, params }: any) => {
       {currentBlog && (
         <BlogAuthor currentBlog={currentBlog} content={content} />
       )}
+      <Box sx={{ backgroundColor: "#f9f9f9" }}>
+        <RecommendedBlogs blogs={allTravelBlogs} gridColumns={2} />
+      </Box>
     </ReduxProvider>
   )
 }
