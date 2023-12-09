@@ -47,7 +47,7 @@ const TravelBlogThumbnail = ({
             )
           })}
         {/** Added empty tag cause <ImageList/> tag from MUI cannot be empty */}
-        <p />
+        <></>
       </ImageList>
     </Box>
   )

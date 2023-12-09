@@ -15,7 +15,7 @@ exports[`The thumbnail card component -- should match the snapshot 1`] = `
   }
 >
   <a
-    aria-label="Click to view the blog: Jibhi - Jalori"
+    aria-label="Jibhi - Jalori: Click to view the blog"
     href="/travel/undefined"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -73,11 +73,11 @@ exports[`The thumbnail text data component -- should match the snapshot 1`] = `
   >
     Travel Itinerary
   </div>,
-  <h4
+  <h3
     className="MuiBox-root css-1liqna"
   >
     Jibhi - Jalori
-  </h4>,
+  </h3>,
   <div
     className="MuiBox-root css-1g91hrd"
   >
@@ -100,8 +100,6 @@ exports[`Travel blog thumbnail cards component -- should match the snapshot 1`] 
         "gridTemplateColumns": "repeat(3, 1fr)",
       }
     }
-  >
-    <p />
-  </ul>
+  />
 </div>
 `;

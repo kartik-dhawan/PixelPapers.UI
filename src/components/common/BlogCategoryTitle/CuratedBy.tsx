@@ -37,7 +37,10 @@ const CuratedBy = ({ name, url, themeColor }: CuratedByProps) => {
             href={!url && !name ? content?.curatedByLink : url ?? ""}
             target="_blank"
             rel="noreferrer"
-            aria-label="View the instagram profile of Kartik Dhawan (The curator of this website)"
+            aria-label={
+              `${name ?? CURATED_BY_LINK_DEFAULT_TEXT}` +
+              ": View the instagram profile of Kartik Dhawan (The curator of this website)"
+            }
           >
             {name ?? CURATED_BY_LINK_DEFAULT_TEXT}
           </Link>
