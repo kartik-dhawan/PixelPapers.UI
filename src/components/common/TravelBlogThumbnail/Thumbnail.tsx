@@ -15,7 +15,7 @@ export const ThumbnailHeadings = ({ item }: any) => {
   return (
     <>
       <Box sx={styles.travelThumbnailsBlogType}>{item?.blogType ?? ""}</Box>
-      <Box component="h4" sx={styles.travelThumbnailsBlogTitle}>
+      <Box component="h3" sx={styles.travelThumbnailsBlogTitle}>
         {item?.blogMetaTitle ?? ""}
       </Box>
       <Box sx={styles.travelThumbnailsLocationText}>
@@ -48,9 +48,9 @@ const Thumbnail = ({ item, index, largeCardIndex }: ThumbnailProps) => {
         href={`/travel/${item.blogUrlSlug}`}
         target="_blank"
         rel="noreferrer"
-        aria-label={`Click to view the blog: ${
+        aria-label={`${
           item?.blogMetaTitle ?? "Travel & More"
-        }`}
+        }: Click to view the blog`}
       >
         <Box
           className={tid + "ImageWrapper"}

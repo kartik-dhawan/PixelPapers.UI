@@ -25,7 +25,7 @@ exports[`Blog category title section component -- should match the snapshot 1`] 
       className="MuiBox-root css-dg28ou"
     >
       <a
-        aria-label="View the instagram profile of Kartik Dhawan (The curator of this website)"
+        aria-label="kartik-dhawan: View the instagram profile of Kartik Dhawan (The curator of this website)"
         href=""
         onClick={[Function]}
         onMouseEnter={[Function]}

@@ -24,7 +24,12 @@ import { useCallback, useState } from "react"
  * ==========================
  */
 
-const CustomBlogImages = ({ blogImages }: { blogImages: any[] }) => {
+interface CustomBlogImagesProps {
+  blogImages: any[]
+  lcp?: boolean
+}
+
+const CustomBlogImages = ({ blogImages, lcp }: CustomBlogImagesProps) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
 
   const imageLoadingHandler = useCallback(() => {
@@ -45,6 +50,7 @@ const CustomBlogImages = ({ blogImages }: { blogImages: any[] }) => {
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw)"
               onLoad={imageLoadingHandler}
+              priority={lcp ?? false}
             />
           </Box>
           <Box sx={styles.customImageTitleText}>

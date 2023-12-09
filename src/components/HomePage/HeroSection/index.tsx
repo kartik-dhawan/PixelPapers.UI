@@ -26,6 +26,7 @@ const HeroSection = () => {
           alt={content.homePageImage?.fields.description ?? "Image"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw)"
+          priority
         />
       </Box>
       <Stack
