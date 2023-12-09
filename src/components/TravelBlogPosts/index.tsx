@@ -61,6 +61,7 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
         {currentBlog?.blogLandingSectionImage && (
           <CustomBlogImages
             blogImages={[currentBlog?.blogLandingSectionImage] ?? []}
+            lcp
           />
         )}
 
