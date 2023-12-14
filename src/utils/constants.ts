@@ -21,3 +21,10 @@ export const ANONYMOUS_AUTHOR_DATA = {
   USERNAME: "Anonymous",
   BIO: `"There are people, who are better unknown" - Hozier`, // eslint-disable-line
 }
+
+export const PODCAST_IFRAME_LINKS_DEFAULT = {
+  SPOTIFY:
+    "https://open.spotify.com/embed/show/0zvlbjXYlI1HyiGLLvul7Z?utm_source=generator",
+  YOUTUBE:
+    "https://www.youtube.com/embed/videoseries?si=XAlNUSdw1KLiZ940&amp;list=PLuusiVNsh08-eBJ3r7YLAzDvzZGtuGHHc",
+}

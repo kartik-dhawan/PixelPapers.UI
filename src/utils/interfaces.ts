@@ -8,7 +8,7 @@ export type ContentfulFields = {
   [key: string]: any
 }
 
-export interface ThumbnailItem {
+export type ThumbnailItem = {
   fields: {
     blogMetaTitle: string
     blogTravelLocation: string
@@ -17,22 +17,29 @@ export interface ThumbnailItem {
   }
   sys: any
 }
-export interface SocialMediaLink {
+export type SocialMediaLink = {
   id: number
   label: string
   url: string
   icon: string
 }
 
-export interface BlogMetaInformationCtf {
+export type BlogMetaInformationCtf = {
   timeToReadInSeconds: number
 }
 
-export interface BlogAuthorData {
+export type BlogAuthorData = {
   username: string
   usernameLink?: string
   email?: string
   bio: string
+}
+
+export type ExternalEmbedLinkObject = {
+  id: number
+  label: "spotify" | "youtube"
+  link?: string
+  title?: string
 }
 
 export interface TravelBlogPost {
@@ -52,6 +59,7 @@ export interface TravelBlogPost {
   blogConclusion?: any
   blogAuthorData?: BlogAuthorData
   authorImage?: any
+  externalEmbedLinks?: ExternalEmbedLinkObject[]
 }
 
 export interface ContentfulTravelBlog {
