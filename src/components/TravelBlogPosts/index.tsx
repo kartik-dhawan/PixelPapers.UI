@@ -1,9 +1,13 @@
 "use client"
 
 import { addCurrentBlog } from "@/redux/slices/travelSlice"
-import { OnThisPageLinkObject, TravelBlogPost } from "@/utils/interfaces"
+import {
+  ExternalEmbedLinkObject,
+  OnThisPageLinkObject,
+  TravelBlogPost,
+} from "@/utils/interfaces"
 import { Box, Stack } from "@mui/material"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import { dmSans } from "@/utils/fonts"
 import MetaInfoBar from "../blogposts/MetaInfoBar"
@@ -12,6 +16,8 @@ import CustomBlogImages from "../blogposts/CustomBlogImages"
 import CustomRichTextComponent from "../blogposts/CustomRichTextComponent"
 import TableOfContents from "../blogposts/TableOfContents"
 import TravelBlogsSkeleton from "../common/Skeletons/TravelBlogsSkeleton"
+import { GLOBAL_COLORS } from "@/utils/colorSchemes"
+import ExternalEmbedLinks from "../blogposts/ExternalEmbedLinks"
 
 interface TravelBlogPostProps {
   currentBlog: TravelBlogPost
@@ -20,6 +26,11 @@ interface TravelBlogPostProps {
 
 const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
   const dispatch = useDispatch()
+
+  const [embedLinks, setEmbedLinks] = useState<ExternalEmbedLinkObject[]>([
+    { id: 0, label: "spotify" },
+    { id: 1, label: "youtube" },
+  ])
 
   useEffect(() => {
     // adding current blog in redux store
@@ -34,6 +45,14 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
       })
     })
     dispatch(updateOnThisPageData(onThisPageData))
+
+    /* updates the embed link
+     * if the object comes empty from contentful the
+     * displays the default links stated in constants file
+     */
+
+    if (currentBlog.externalEmbedLinks)
+      setEmbedLinks(currentBlog.externalEmbedLinks)
   }, [currentBlog])
 
   return (
@@ -61,9 +80,9 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
         {currentBlog?.blogLandingSectionImage && (
           <CustomBlogImages
             blogImages={[currentBlog?.blogLandingSectionImage] ?? []}
+            lcp
           />
         )}
-
         {/* TOC Section for screen resolution lower than desktop */}
         {currentBlog?.blogContentAll && (
           <Box
@@ -75,7 +94,6 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
             <TableOfContents isDesktop={false} />
           </Box>
         )}
-
         {/* blog content */}
         {currentBlog && currentBlog.blogContentAll ? (
           <>
@@ -102,6 +120,18 @@ const TravelBlogPosts = ({ currentBlog }: TravelBlogPostProps) => {
         ) : (
           <TravelBlogsSkeleton />
         )}
+
+        {/* iFrame external link embeds */}
+        <Box
+          sx={{
+            margin: "1rem 0rem",
+            color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
+            fontSize: "18px",
+          }}
+        >
+          Follow my other travel & books related content.
+        </Box>
+        <ExternalEmbedLinks embedLinks={embedLinks} />
       </Stack>
     </Stack>
   )

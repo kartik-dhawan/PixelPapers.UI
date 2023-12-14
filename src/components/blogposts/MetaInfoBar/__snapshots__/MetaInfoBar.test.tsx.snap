@@ -20,7 +20,7 @@ exports[`Meta Information Bar Component -- should match the snapshot 1`] = `
     <div
       className="MuiBox-root css-0"
     >
-      Modified on : 
+      Added on : 
       Jan 1
     </div>
   </div>

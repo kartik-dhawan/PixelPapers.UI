@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog Author Section Component -- it should match the snapshot 1`] = `
+<section
+  className="MuiStack-root blogAuthorSectionWrapper className css-1bu8ci5-MuiStack-root"
+>
+  <div
+    className="MuiBox-root css-1kpt9ie"
+  >
+    by
+  </div>
+  <div
+    className="MuiStack-root css-1o9heaf-MuiStack-root"
+  >
+    <hr
+      className="MuiDivider-root MuiDivider-fullWidth css-1ec78s4-MuiDivider-root"
+    />
+    <div
+      className="MuiBox-root css-y5mt8b"
+    />
+    <hr
+      className="MuiDivider-root MuiDivider-fullWidth css-1ec78s4-MuiDivider-root"
+    />
+  </div>
+  <div
+    className="MuiBox-root css-9qdcri"
+  />
+  <div
+    className="MuiBox-root css-tt3dop"
+  />
+</section>
+`;
