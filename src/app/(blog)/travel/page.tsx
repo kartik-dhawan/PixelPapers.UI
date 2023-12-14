@@ -38,11 +38,30 @@ const Travelpage = async () => {
           <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
             featured stories
           </Box>
+          <Box
+            component="p"
+            sx={{
+              textAlign: "center",
+              color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
+            }}
+          >
+            Articles based on my real experiences while travelling.
+          </Box>
           <TravelBlogThumbnail type="stories" largeCardIndex={0} />
         </Box>
         <Box component="section" sx={{ marginBottom: "4rem" }}>
           <Box component="h2" sx={styles.travelThumbnailsBlogGroupTitle}>
             hand-picked itineraries
+          </Box>
+          <Box
+            component="p"
+            sx={{
+              textAlign: "center",
+              color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
+            }}
+          >
+            Itineraries that could help you truly embrace your vacation rather
+            than just checking-off places off the list.
           </Box>
           <TravelBlogThumbnail type="itineraries" largeCardIndex={2} />
         </Box>

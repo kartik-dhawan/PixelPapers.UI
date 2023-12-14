@@ -32,7 +32,7 @@ const MetaInfoBar = ({ currentBlog }: MetaInfoBarProps) => {
             : `${AVERAGE_TIME_TO_READ_A_BLOG}`}
           &nbsp;min read
         </Box>
-        <Box>Modified on : {getDateFromString(currentBlog.updatedAt)}</Box>
+        <Box>Added on : {getDateFromString(currentBlog.createdAt)}</Box>
       </Stack>
       <Divider />
     </Box>
