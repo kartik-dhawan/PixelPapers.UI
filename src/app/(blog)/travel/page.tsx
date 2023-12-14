@@ -43,6 +43,7 @@ const Travelpage = async () => {
             sx={{
               textAlign: "center",
               color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
+              margin: "1rem 1rem 2rem",
             }}
           >
             Articles based on my real experiences while travelling.
@@ -58,6 +59,7 @@ const Travelpage = async () => {
             sx={{
               textAlign: "center",
               color: GLOBAL_COLORS.TEXT_PRIMARY_LIGHTER,
+              margin: "1rem 1rem 2rem",
             }}
           >
             Itineraries that could help you truly embrace your vacation rather
