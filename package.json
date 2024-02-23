@@ -11,6 +11,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "@as-integrations/next": "^3.0.0",
     "@contentful/rich-text-react-renderer": "^15.19.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -20,6 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "contentful": "^10.6.10",
     "eslint-plugin-prettier": "^5.0.1",
+    "graphql-tag": "^2.12.6",
     "next": "14.0.3",
     "next-router-mock": "^0.9.10",
     "prettier": "^3.1.0",
